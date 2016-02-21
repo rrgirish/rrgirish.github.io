@@ -2,8 +2,15 @@
 layout: page
 permalink: /about/index.html
 title: GIRISH RAO
-tags: [Girish, Rao, rrgirish]
+tags: 
+  - Girish
+  - Rao
+  - rrgirish
+published: true
+image: 
+  feature: cover3.jpg
 ---
+
 ![cover-image](http://www.virtualtipsntricks.com/images/cover3.jpg)
 My name is **Girish Rao**, and this is my personal blog.  
 
