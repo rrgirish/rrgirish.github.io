@@ -1,4 +1,6 @@
-
+---
+layout: post
+---
 ![cover-image](http://www.virtualtipsntricks.com/images/cover3.jpg)
 My name is **Girish Rao**, and this is my personal blog.  
 
