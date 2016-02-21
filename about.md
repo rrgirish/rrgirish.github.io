@@ -1,5 +1,8 @@
 ---
 layout: post
+permalink: /about/index.html
+title: GIRISH RAO
+tags: [Girish, Rao, rrgirish]
 ---
 ![cover-image](http://www.virtualtipsntricks.com/images/cover3.jpg)
 My name is **Girish Rao**, and this is my personal blog.  
