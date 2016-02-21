@@ -6,7 +6,6 @@ headline: "Why Jekyll?"
 modified: "Tue Jul 22 2014 17:00:00 GMT-0700 (PDT)"
 category: webdevelopment
 tags: jekyll
-imagefeature: ""
 mathjax: false
 chart: null
 comments: true
