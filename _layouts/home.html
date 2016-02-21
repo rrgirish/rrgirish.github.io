@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html>
 <!--
-                                                                                                                                
-####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### 
-                                                                                                                                
-                                                                                                                                
-                                                                                                                                
- ######   #### ########  ####  ######  ##     ##    ########     ###     #######                                                
-##    ##   ##  ##     ##  ##  ##    ## ##     ##    ##     ##   ## ##   ##     ##                                               
-##         ##  ##     ##  ##  ##       ##     ##    ##     ##  ##   ##  ##     ##                                               
-##   ####  ##  ########   ##   ######  #########    ########  ##     ## ##     ##                                               
-##    ##   ##  ##   ##    ##        ## ##     ##    ##   ##   ######### ##     ##                                               
-##    ##   ##  ##    ##   ##  ##    ## ##     ##    ##    ##  ##     ## ##     ##                                               
- ######   #### ##     ## ####  ######  ##     ##    ##     ## ##     ##  #######                                                
-                                                                                                                                
-                                                                                                                                
-                                                                                                                                
-####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### ####### 
+====================================================
+    __  ____  ______________  _______ ___    __ 
+   / / / /  |/  / ____/   \ \/ / ___//   |  / / 
+  / /_/ / /|_/ / /_  / /| |\  /\__ \/ /| | / /  
+ / __  / /  / / __/ / ___ |/ /___/ / ___ |/ /___
+/_/ /_/_/  /_/_/   /_/  |_/_//____/_/  |_/_____/
+                                                     
+====================================================
+Owner Name: Hossain Mohammad Faysal
+Profile: https://www.facebook.com/hmfaysal
+Version: 1.1
+Description: Awesome dude, awesome life
 ====================================================
 -->
 <head>
 {% include head.html %}
 </head>
 <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
-<header class="summer-site-head">
-    <div class="summer-site-head-menu">
-        <a class="summer-blog-logo" href="{{ site.url }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="Blog Logo" /></a>
+<header class="notepad-site-head">
+    <div class="notepad-site-head-menu">
+        <a class="notepad-blog-logo" href="{{ site.url }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="Blog Logo" /></a>
         
         
-        <div class="summer-blog-menu">      
-    <div class="summer-mobile-menu show-for-small">
+        <div class="notepad-blog-menu">      
+    <div class="notepad-mobile-menu show-for-small">
         <a href="#"><i class="fa fa-bars"></i></a>
     </div>
-    <ul class="summer-menu">
-        <li class="summer-mobile-close-btn show-for-small text-right">
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
             <a href="#"><i class="fa fa-times"></i></a>
         </li>
 {% for link in site.links %}
@@ -48,19 +44,19 @@
 </div>
         <div class="clearfix"></div>
     </div>
-    <div class="summer-site-head-content" >
-        <div class="summer-site-head-bg"></div>
-        <h1 class="summer-blog-title">
-            <span class="summer-site-head-title-bg">
+    <div class="notepad-site-head-content" >
+        <div class="notepad-site-head-bg"></div>
+        <h1 class="notepad-blog-title">
+            <span class="notepad-site-head-title-bg">
                 {{ site.title }}
             </span>
         </h1>
-        <h2 class="summer-blog-description">{{ site.description }}</h2>
+        <h2 class="notepad-blog-description">{{ site.description }}</h2>
     </div>
 </header>
 
 
-<main class="summer-content" role="main">
+<main class="notepad-content" role="main">
 
             {{ content }}
 </main>
