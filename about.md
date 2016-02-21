@@ -6,9 +6,7 @@ tags: [Girish, Rao, rrgirish]
 image:
   feature: rrgirish.jpg
 ---
-![cover-image]{{ site.url }}/images/cover3.jpg
-  <img src="{{ site.url }}/images/rrgirish.jpg" alt="Girish Rao">
-
+![cover-image]http://www.virtualtipsntricks.com/images/cover3.jpg
 
 My name is **Girish Rao**, and this is my personal blog.  
 
