@@ -1,12 +1,11 @@
 ---
 layout: page
-permalink: /rrgirish/index.html
+permalink: /about/index.html
 title: GIRISH RAO
 tags: [Girish, Rao, rrgirish]
-image:
-  feature: rrgirish.jpg
+image:http://www.virtualtipsntricks.com/images/cover3.jpg
+feature: rrgirish.jpg
 ---
-![cover-image]http://www.virtualtipsntricks.com/images/cover3.jpg
 
 My name is **Girish Rao**, and this is my personal blog.  
 
