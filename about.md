@@ -2,16 +2,21 @@
 layout: page
 permalink: /about/index.html
 title: GIRISH RAO
-tags: 
+tags:
   - Girish
   - Rao
   - rrgirish
 published: true
-image: 
+image:
   feature: cover3.jpg
 ---
 
 ![cover-image](http://www.virtualtipsntricks.com/images/cover3.jpg)
+<figure>
+  <img src="{{ site.url }}/images/Girish-Rao.jpg" alt="Girish Rao">
+  <figcaption>Girish Rao</figcaption>
+</figure>
+
 My name is **Girish Rao**, and this is my personal blog.  
 
 I have 10 years of experience in Software Development and Automation. I am currently pursuing my masters in computer science at USC. I am passionate about solving complex engineering problems by utilizing my analytical and algorithm design skills. I am broadly interested in virtualization, cloud computing, algorithms, security and web development.
@@ -36,11 +41,11 @@ I make what I love.
 > For
 >
 > the makers,
-> 
+>
 > the creators,
-> 
+>
 > the discoverers,
-> 
+>
 > the original thinkers,
-> 
+>
 > ### *This is the space to create.* ###

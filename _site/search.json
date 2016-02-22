@@ -1,19 +1,19 @@
 [
 	
 		{
+		  "title"      : "Why Jekyll?",
+		  "category"   : "webdevelopment",
+		  "url"        : "/webdevelopment/why-jekyll",
+		  "date"       : "2016-02-21 00:00:00 +0600",
+		  "shortdate"  : "February 21, 2016"
+		} ,
+	
+		{
 		  "title"      : "First Commit",
 		  "category"   : "",
 		  "url"        : "/personal/first-commit",
 		  "date"       : "2016-02-20 00:00:00 +0600",
 		  "shortdate"  : "February 20, 2016"
-		} ,
-	
-		{
-		  "title"      : "Jekyll + Prose.io",
-		  "category"   : "",
-		  "url"        : "/webdevelopment/jekyll-prose-io",
-		  "date"       : "2014-05-15 00:00:00 +0600",
-		  "shortdate"  : "May 15, 2014"
 		} 
 	
 ]
