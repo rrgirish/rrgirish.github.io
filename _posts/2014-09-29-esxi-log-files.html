@@ -1,0 +1,13 @@
+---
+layout: post
+title: ESXi Log Files
+date: '2014-09-29T04:54:00.001-07:00'
+author: Girish Rao
+tags:
+- esxi
+modified_time: '2014-10-11T23:52:58.881-07:00'
+blogger_id: tag:blogger.com,1999:blog-984868599755994151.post-6164923353495591098
+blogger_orig_url: http://www.virtualtipsntricks.com/2014/09/esxi-log-files.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><br />Working with ESX(i) log files is important when troubleshooting issues within the virtual environment. So which information is stored where? Below is a list of the log files and what they contain. Note that all of them are located in /var/log.<br /><table border="1" cellpadding="2" cellspacing="0" style="width: 400px;"> <tbody><tr> <td valign="top" width="199">auth.log</td> <td valign="top" width="199">ESXi Shell authentication success and failure</td></tr><tr> <td valign="top" width="199">dhclient.log</td> <td valign="top" width="199">DHCP Client logs</td></tr><tr> <td valign="top" width="199">esxupdate.log</td> <td valign="top" width="199">ESXi patches and update installation logs</td></tr><tr> <td valign="top" width="199">hostd.log</td> <td valign="top" width="199">Host management service logs, including VM and host tasks and evens, vpxa related events.</td></tr><tr> <td valign="top" width="199">shell.log</td> <td valign="top" width="199">ESXi shell usage (history of all commands run on the command line)</td></tr><tr> <td valign="top" width="199">sysboot.log</td> <td valign="top" width="199">VMkernel startup and module loading</td></tr><tr> <td valign="top" width="199">boot.gz</td> <td valign="top" width="199">Boot log information. Read this via zcat command.</td></tr><tr> <td valign="top" width="199">syslog.log </td> <td valign="top" width="199">Management service initialization, DCUI use, scheduled tasks.</td></tr><tr> <td valign="top" width="199">usb.log</td> <td valign="top" width="199">USB device arbitration events like discovery. </td></tr><tr> <td valign="top" width="199">vob.log</td> <td valign="top" width="199">VMkernel observation events </td></tr><tr> <td valign="top" width="199">vmkernel.log</td> <td valign="top" width="199">Core VMkernel logs, including storage and networking events, VM startup </td></tr><tr> <td valign="top" width="199">vmkwarning.log</td> <td valign="top" width="199">VMkernel warning and alert log messages</td></tr><tr> <td valign="top" width="199">vmksummary.log</td> <td valign="top" width="199">A summary of ESXi startup and shutdown. It also records hourly heartbeat with uptime, number of VMs running and service resource consumption. </td></tr></tbody></table></div>

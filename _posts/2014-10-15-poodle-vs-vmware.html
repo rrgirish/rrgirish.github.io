@@ -1,0 +1,13 @@
+---
+layout: post
+title: Poodle Vs VMware
+date: '2014-10-15T22:35:00.001-07:00'
+author: Girish Rao
+tags:
+- misc
+modified_time: '2014-10-22T19:35:37.486-07:00'
+blogger_id: tag:blogger.com,1999:blog-984868599755994151.post-2795395772475059630
+blogger_orig_url: http://www.virtualtipsntricks.com/2014/10/poodle-vs-vmware.html
+---
+
+<div style="text-align: left" dir="ltr" trbidi="on"><br><br>Thanks to HeartBleed and ShellShock, the eyes of the computing world are now fixed firmly on security. People were wondering what the next major vulnerability will be. Along comes Poodle, as per our expectations.<br>To know more about Poodle, refer the blog post from Google Security.<br><a title="http://googleonlinesecurity.blogspot.in/2014/10/this-poodle-bites-exploiting-ssl-30.html" href="http://googleonlinesecurity.blogspot.in/2014/10/this-poodle-bites-exploiting-ssl-30.html">http://googleonlinesecurity.blogspot.in/2014/10/this-poodle-bites-exploiting-ssl-30.html</a><br>VMware investigated this in a pretty short time and has come out with this blog post:<br><a title="http://blogs.vmware.com/security/2014/10/cve-2014-3566-aka-poodle.html" href="http://blogs.vmware.com/security/2014/10/cve-2014-3566-aka-poodle.html">http://blogs.vmware.com/security/2014/10/cve-2014-3566-aka-poodle.html</a><br>This basically says that even though this is more practical than the 2011 BEAST attack, this is a browser based vulnerability which uses MITM technique and thus doesn't directly impact VMware products.<br>There is a KB out as well:<br><a title="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2092133" href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2092133">http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2092133</a><br><strong>vTip: </strong>Everybody is advised to disable SSLV3 in their browser. (<a href="https://zmap.io/sslv3/browsers.html">https://zmap.io/sslv3/browsers.html</a>)<br> <div style="text-align: left" dir="ltr" trbidi="on"><br>There will be updates released for Firefox and Chrome which will disallow SSL V3. So time to update those browsers!</div> <div style="text-align: left" dir="ltr" trbidi="on">&nbsp;</div> <div style="text-align: left" dir="ltr" trbidi="on">EDIT::VMware now recognizes to be more severe and is planning to remove SSL V3 support from its products and services. </div></div>  

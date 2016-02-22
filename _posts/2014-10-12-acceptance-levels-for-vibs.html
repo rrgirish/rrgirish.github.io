@@ -1,0 +1,13 @@
+---
+layout: post
+title: Acceptance Levels for VIBs
+date: '2014-10-12T00:17:00.001-07:00'
+author: Girish Rao
+tags:
+- esxi
+modified_time: '2014-10-12T00:18:26.754-07:00'
+blogger_id: tag:blogger.com,1999:blog-984868599755994151.post-5300089008657117842
+blogger_orig_url: http://www.virtualtipsntricks.com/2014/10/acceptance-levels-for-vibs.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">&nbsp; <br />VMware and its partners package solutions, drivers, CIM providers, and applications that extend the ESXi platform. This software is installed on ESXi via software packages called VIBs. <br /> Each VIB is released with a rating called an “acceptance level.” The host acceptance level determines which VIBs can be installed to a host. VMware supports the following acceptance levels:<br /> <br /> <table border="1" cellpadding="2" cellspacing="0" style="width: 507px;"> <tbody><tr> <td valign="top" width="203"><strong>Acceptance Level</strong></td> <td valign="top" width="302"><strong>Requirements</strong></td></tr><tr> <td valign="top" width="205">VMwareCertified</td> <td valign="top" width="301">This acceptance level has the most stringent requirements. VIBs with this level go through thorough testing fully equivalent to VMware in-house testing. Other than software written by VMware, only I/O Vendor Partner Program (IOVP)&nbsp; drivers are published at this level. VMware takes support calls for VIBs with this acceptance level.</td></tr><tr> <td valign="top" width="206">VMwareAccepted</td> <td valign="top" width="300">VIBs with this acceptance level go through verification testing, but the tests do not cover every function of the software. A partner runs the tests and VMware verifies the results. Today, CIM providers and PSA plug-ins are among the VIBs published at this level. Support calls for these VIBs are directed to the partner organization.</td></tr><tr> <td valign="top" width="207">PartnerSupported</td> <td valign="top" width="299">VIBs with this acceptance level are published by a partner that is trusted by VMware. The partner performs all testing. VMware does not verify the results. Support calls are redirected to the partner organization.</td></tr><tr> <td valign="top" width="208">CommunitySupported</td> <td valign="top" width="299">This acceptance level is for VIBs created by individuals or companies outside of VMware partner programs. VIBs at this level have not gone through any testing program approved by VMware and are not supported by VMware technical support or by a VMware partner</td></tr></tbody></table><strong>vTip</strong>: You can create your own VIBs. If you build a custom ESX image with your own VIBs, make sure to set the host acceptance level to CommunitySupported.<br />  </div>

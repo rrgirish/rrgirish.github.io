@@ -1,0 +1,13 @@
+---
+layout: post
+title: PowerCLI script to update all Hosts via VUM
+date: '2014-09-28T20:50:00.001-07:00'
+author: Girish Rao
+tags:
+- powercli
+modified_time: '2014-10-11T23:53:20.224-07:00'
+blogger_id: tag:blogger.com,1999:blog-984868599755994151.post-182436018616804510
+blogger_orig_url: http://www.virtualtipsntricks.com/2014/09/powercli-script-to-update-all-hosts-via.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><br />Using PowerCLI for VUM, it becomes a lot easier to remediate all the hosts. All you need to do is to <strong>enable DRS in fully automated mode</strong> and then attach the baselines to the host. Then run the below script and wait for the magic to happen! <br /><pre>$Baseline = Get-Baseline -TargetType host<br />Get-VMhost | ForEach-Object {&nbsp;&nbsp; Set-VMhost -vmhost $_ -state maintenance&nbsp;&nbsp; Remediate-Inventory -Entity $_ -Baseline $Baseline -Confirm:$False&nbsp;&nbsp; Set-VMhost -vmhost $_ -state connected<br />} </pre></div>

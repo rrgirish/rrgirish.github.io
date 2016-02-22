@@ -1,0 +1,14 @@
+---
+layout: post
+title: Joining the vCenter Server Virtual Appliance to AD
+date: '2014-10-09T03:21:00.001-07:00'
+author: Girish Rao
+tags:
+- vcenter
+modified_time: '2014-10-11T23:49:48.468-07:00'
+thumbnail: http://lh6.ggpht.com/-urM6day-Xoo/VDZhihpxTPI/AAAAAAAACgQ/0ANWVRrrQMY/s72-c/VCVA_thumb%25255B1%25255D.jpg?imgmax=800
+blogger_id: tag:blogger.com,1999:blog-984868599755994151.post-8936095488719117615
+blogger_orig_url: http://www.virtualtipsntricks.com/2014/10/joining-vcenter-server-virtual.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><br />When the vCenter Server Appliance is joined to an Active Directory domain, it REQUIRES a reboot before it will operate correctly. This is displayed in the VAMI: <br /><a href="http://lh5.ggpht.com/-JDmOMvbmojk/VDZhgshMabI/AAAAAAAACgI/NY_HUk9cplw/s1600-h/VCVA%25255B3%25255D.jpg"><img alt="VCVA" border="0" src="http://lh6.ggpht.com/-urM6day-Xoo/VDZhihpxTPI/AAAAAAAACgQ/0ANWVRrrQMY/VCVA_thumb%25255B1%25255D.jpg?imgmax=800" height="279" style="border-bottom: 0px; border-left: 0px; border-right: 0px; border-top: 0px; display: block; float: none; margin-left: auto; margin-right: auto;" title="VCVA" width="537" /></a> <br />To avoid unexpected downtime, the Appliance does not force the user to reboot after configuring Active Directory authentication. I have seen several problems caused when users try to avoid this reboot entirely. This will cause the appliance to fail during certain Active Directory related Single Sign-On operations.<br /><strong>Pro Tip: </strong>Reboot the Appliance <strong>immediately</strong> after joining it to an Active Directory domain!</div>
