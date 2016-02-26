@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: about_page
 permalink: /about/index.html
 title: GIRISH RAO
 tags:
@@ -7,11 +7,9 @@ tags:
   - Rao
   - rrgirish
 published: true
-image:
-  feature: cover3.jpg
+imagefeature: cover9.jpg
 ---
 
-![cover-image](http://www.virtualtipsntricks.com/images/cover3.jpg)
 <figure>
   <img src="{{ site.url }}/images/Girish-Rao.jpg" alt="Girish Rao">
   <figcaption>Girish Rao</figcaption>
