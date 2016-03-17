@@ -2,13 +2,14 @@
 layout: about_page
 permalink: /about/index.html
 title: GIRISH RAO
-tags:
+tags: 
   - Girish
   - Rao
   - rrgirish
 published: true
 imagefeature: cover9.jpg
 ---
+
 
 <figure>
   <img src="{{ site.url }}/images/Girish-Rao.jpg" alt="Girish Rao">
@@ -34,16 +35,3 @@ stuff.
 I make what I love.
 
 *I love what I do.*
-
-
-> For
->
-> the makers,
->
-> the creators,
->
-> the discoverers,
->
-> the original thinkers,
->
-> ### *This is the space to create.* ###
