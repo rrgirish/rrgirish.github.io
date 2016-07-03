@@ -2,7 +2,7 @@
 layout: about_page
 permalink: /about/index.html
 title: GIRISH RAO
-tags: 
+tags:
   - Girish
   - Rao
   - rrgirish
@@ -24,14 +24,3 @@ I am very comfortable in Java, Javascript and Python. I loved using swift, C, C+
 
 I am a huge fan of iterative development methodologies like Agile. When the end goal is unclear, I start by establishing bounds and/or expected best / worst - case scenarios. By doing so, I get better clarity on the problem and its constraints. On a side note, I enjoy figuring out what existing code does, debugging issues and trying to break the software.
 
-I
-make
-stuff.
-
-
-*Beautiful, practical, meaningful stuff.*
-
-
-I make what I love.
-
-*I love what I do.*
