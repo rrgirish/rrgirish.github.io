@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HOW TO MIGRATE FROM VCENTER 4.1 TO VCENTER 5.5 &vert; VIRTUALTIPSNTRICKS</title>
+<meta name="description" content="vTips For Programmers">
+<meta name="keywords" content="vcenter">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="How to migrate from VCenter 4.1 to VCenter 5.5">
+<meta name="twitter:description" content="vTips For Programmers">
+<meta name="twitter:creator" content="@rrgirish">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to migrate from VCenter 4.1 to VCenter 5.5">
+<meta property="og:description" content="vTips For Programmers">
+<meta property="og:url" content="/how-to-migrate-from-vcenter-41-to">
+<meta property="og:site_name" content="VirtualTipsnTricks">
+<meta property="og:image" content="/images/intro-bg.jpg">
+
+
+
+
+
+<link rel="canonical" href="/how-to-migrate-from-vcenter-41-to">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VirtualTipsnTricks Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/assets/css/vendor/nprogress.css">
+    <link rel="stylesheet" href="/assets/css/vendor/foundation.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+
+
+
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
+</head>
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">
+
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href="">
+                        <img src="/images/logo.png" alt="Blog Logo" />
+                    </a>
+
+                <div class="notepad-blog-menu">
+    <div class="notepad-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+
+            <li>
+                    <a href="/">Home</a>
+                 </li>
+
+            <li>
+                    <a href="/featured">Featured Posts</a>
+                 </li>
+
+            <li>
+                    <a href="/categories">Categories</a>
+                 </li>
+
+            <li>
+                    <a href="/about">About</a>
+                 </li>
+
+           <li><a href="/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+    </ul>
+
+</div>
+            </div>
+
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h1>How to migrate from VCenter 4.1 to VCenter 5.5</h1>
+                            <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#vcenter" data-toggle="tooltip" title="Posts tagged with vcenter" rel="tag">vcenter</a> <strong><time datetime="2014-08-13T10:55:00+06:00">13 Aug 2014</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <article class="notepad-post-content post tag-simple">
+            <div><div dir="ltr" style="text-align: left;" trbidi="on"><div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><br />1. Install a 64-bit Windows OS on a new vCenter server. Lets call this new server "vc5" and let's call the current vCenter 4.1 server "vc4". Make sure that the hostname/ip address of vc5 is properly registered in DNS - forward and reverse pointer records created and work successfully.</em></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">2. On vc4, use SQL Management Studio Express to take a backup of the vCenter database. It is desirable to shutdown the vCenter services beforehand and keep them disabled.</em></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">3. Install the SQL-2008-R2-Express software from the "redist" folder on the vCenter 5.5 DVD onto vc5. Also download and install the relevant version of SQL Management Studio Express.</em></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">4. On vc5, launch SQL Management Studio, create a "fictitious" vCenter database of the same name as the&nbsp; VC 4.1 database, right-click it and restore the backup.</em></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">5. On vc5, create a 64-bit ODBC DSN using the SQL Native Client v10 driver pointing to the restored vCenter database that's still in "vCenter 4.1 format". Ensure ODBC connectivity tests are successful.</em></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">6. If the Windows OS version on vc5 and vc4 are the same, the ADAM database must also be migrated to vc5 by first backing it up as follows:-</em></div><ol style="border: 0px; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; line-height: 21px; margin: 0px; orphans: 2; outline: 0px; padding: 0px 0px 0px 30px; vertical-align: baseline; widows: 2;"><li style="border: 0px; font-family: inherit; font-style: inherit; list-style: inherit; margin: 0.5ex 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Click&nbsp;<strong style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Start</strong>, right-click&nbsp;<strong style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Command Prompt</strong>, then click&nbsp;<strong style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Run as administrator&nbsp;</strong>to open a command prompt.</em></li><li style="border: 0px; font-family: inherit; font-style: inherit; list-style: inherit; margin: 0.5ex 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Run the command: dsdbutil</em></li><li style="border: 0px; font-family: inherit; font-style: inherit; list-style: inherit; margin: 0.5ex 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">At the dsdbutil: prompt, run the command: activate instance VMwareVCMSDS</em></li><li style="border: 0px; font-family: inherit; font-style: inherit; list-style: inherit; margin: 0.5ex 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Run this command to open the ifm prompt: ifm</em></li><li style="border: 0px; font-family: inherit; font-style: inherit; list-style: inherit; margin: 0.5ex 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><em style="background-color: white; border: 0px; line-height: 18px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">At the ifm: prompt, run this command for the type of installation media that you want to create: create full&nbsp;<em style="border: 0px none; font-family: inherit; font-size: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">location</em></em></li></ol><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><span style="border: 0px none; font-family: inherit; font-size: inherit !important; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px 0px 0px 60px; outline: 0px; padding: 0px; vertical-align: baseline;">For example: create full C:\Backup\VMwareVCMSDS</span></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><span style="border: 0px none; font-family: inherit; font-size: inherit !important; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px 0px 0px 60px; outline: 0px; padding: 0px; vertical-align: baseline;">You see output similar to:<br />ifm: create full C:\Backup\VMwareVCMSDS Creating snapshot... Snapshot set {93758b0e-0b5f-4969-a3ae-c3672b659e08} generated successfully. Snapshot {d3257ca1-cb91-4535-82c0-8aa38bc0b566} mounted as C:\$SNAP_201010251019 _VOLUMEC$\ Initiating DEFRAGMENTATION mode... Source Database: C:\$SNAP_201010251019_VOLUMEC$\Program Files\VMware\Infras tructure\VirtualCenter Server\VMwareVCMSDS\adamntds.dit Target Database: c:\Backup\VMwareVCMSDS\adamntds.dit</span></div><blockquote style="background-image: url(https://communities.vmware.com/5.0.5/images/quote-background-1.gif); background-repeat: repeat; border-color: rgb(238, 238, 238) rgb(238, 238, 238) rgb(238, 238, 238) rgb(204, 204, 204); border-style: solid; border-width: 1px 1px 1px 2px; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; line-height: 21px; margin: 10px 20px; orphans: 2; outline: 0px; overflow: auto; padding: 10px; vertical-align: baseline; widows: 2;"><blockquote style="background-image: url(https://communities.vmware.com/5.0.5/images/quote-background-2.gif); background-repeat: repeat repeat; border-bottom-color: rgb(238, 238, 255); border-bottom-style: solid; border-bottom-width: 1px; border-left-color: rgb(204, 204, 255); border-left-style: solid; border-left-width: 2px; border-right-color: rgb(238, 238, 255); border-right-style: solid; border-right-width: 1px; border-top-color: rgb(238, 238, 255); border-top-style: solid; border-top-width: 1px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 10px 20px; outline: 0px; overflow: auto; padding: 10px; vertical-align: baseline;">Defragmentation Status (% complete)0 1020 30 40 50 60 70 80 90 100|----|----|----|----|----|----|----|----|----|----|...................................................Snapshot {d3257ca1-cb91-4535-82c0-8aa38bc0b566} unmounted.IFM media created successfully in C:\Backup\VMwareVCMSDS</blockquote></blockquote><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp; 6. Exit dsdbutil:</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp; 7.At the ifm: prompt, type quit, then press Enter.</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp; 8. At the dsdbutil: prompt, type quit, then press Enter.</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; height: 8pt; margin: 2px; min-height: 8pt; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><br /></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">7. On vc5, stop and restart the vCenter SQL Database service, then insert the vCenter 5.5 DVD and get it to do a fresh install.&nbsp;<strong style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Do not select the Simple Install option. Install each component one at a time.&nbsp;</strong>When the vCenter Server component installation gets to the database part, you tell it to use the DSN created in step 5 and it will detect that it's a vCenter 4.1 database and prompt you to upgrade it.</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">8. If the Windows OS version on vc5 and vc4 are the same, the ADAM database must be restored as follows:-</div><ol style="border: 0px; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; line-height: 21px; margin: 0px; orphans: 2; outline: 0px; padding: 0px 0px 0px 30px; vertical-align: baseline; widows: 2;"><li style="border: 0px; font-family: inherit; font-style: inherit; list-style: inherit; margin: 0.5ex 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Stop these services in this order<br />VMware VirtualCenter Management Webservices<br />VMware VirtualCenter Server<br />VMwareVCMSDS</li><li style="border: 0px; font-family: inherit; font-style: inherit; list-style: inherit; margin: 0.5ex 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Backup the files in the folder that contains the instance data files to an alternate location. By default, the database and log files are located at %ProgramFiles%\VMware\Infrastructure\VirtualCenter Server\VMwareVCMSDS.<br /><strong style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Note</strong>: In Windows 2008/2008 R2, the default path is: C:\%ProgramData%\VMware\VMware VirtualCenter\VMwareVCMSDS.</li></ol><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp; 3. Run this command to copy the ADAM backup that was created using dsdbutil.exe in step 6 to the folder that contained the original ADAM database and log files:</div><blockquote style="background-image: url(https://communities.vmware.com/5.0.5/images/quote-background-1.gif); background-repeat: repeat; border-color: rgb(238, 238, 238) rgb(238, 238, 238) rgb(238, 238, 238) rgb(204, 204, 204); border-style: solid; border-width: 1px 1px 1px 2px; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; line-height: 21px; margin: 10px 20px; orphans: 2; outline: 0px; overflow: auto; padding: 10px; vertical-align: baseline; widows: 2;"><div style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: 18px; margin: 2px; outline: 0px; padding: 0px; vertical-align: baseline;"><strong style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">Note</strong>: In vSphere 5.1 and vSphere 5.5, the VMwareVCMSDS folder is located:<br />xcopy /os b<em style="border: 0px none; font-family: inherit; font-size: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">ackup_location</em>\adamntds.dit "%ProgramData%\VMware\VMware VirtualCenter\VMwareVCMSDS"</div><div style="border: 0px none; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: 18px; margin: 2px; outline: 0px; padding: 0px; vertical-align: baseline;">Where backup_<em style="border: 0px none; font-family: inherit; font-size: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">location</em>&nbsp;is the folder path within which the ADAM database was backed up. For example:<br />xcopy /os C:\Backup\VMwareVCMSDS\adamntds.dit "c:\Program Files\VMware\Infrastructure\VirtualCenter Server\VMwareVCMSDS"</div></blockquote><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp; 4. Start these services in this order:</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VMware VirtualCenter Server</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VMwareVCMSDS</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VMware VirtualCenter Management Webservices</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; height: 8pt; margin: 2px; min-height: 8pt; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;"><br /></div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">9. Check the /etc/hosts files on the ESXi servers and remove any references to vc4 if they exist. Check that the ESXi servers can ping vc5 by name and IP.</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">10. Using the vSphere 5.5 client, login to vCenter on vc5 as&nbsp;<a href="mailto:Administrator@vsphere.local." style="background-image: url(https://communities.vmware.com/5.0.5/images/jive-icon-email-12x12.png); background-position: 0% 50%; background-repeat: no-repeat; border: 0px none; color: #3399cc; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; line-height: inherit; margin: 0px; outline: 0px; padding: 1px 0px 1px 17px; text-decoration: none; vertical-align: baseline; zoom: 1;">Administrator@vsphere.local.</a>&nbsp;Re-connect the ESXi hosts and monitor that the new vCenter agents and HA agents get installed successfully.</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">11. Goto vCenter Server Settings and select Runtime Settings. Replace the hostname of vc4 with vc5 and put vc5's IP address as the Managed Server.</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">12. Still in vCenter Server Settings, select Advanced Settings and carefully change all URL entries to point to the new vc5 server's name.</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">13. Reboot vc5. Login to vCenter using the vSphere Client and from the Home screen, select vCenter Service Status. Check that all services have big green ticks. If there are any red crosses:-</div><div style="border: 0px none; color: #666666; font-family: proxima-nova, Arial, sans-serif; font-size: 14px; margin: 2px; orphans: 2; outline: 0px; padding: 0px; vertical-align: baseline; widows: 2;">Follow the instructions in VMware KB 2006132 and NOTE in step 6, replace "cleanup.bat com.vmware.converter" with "cleanup.bat com.vmware.xxxxx", where xxxxx is the name of the service with the red cross.</div></div></div>
+            </div>
+        </article>
+        <div class="cf"></div>
+        <div class="row text-center">
+            <section class="notepad-post-share">
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;How to migrate from VCenter 4.1 to VCenter 5.5&quot;%20/how-to-migrate-from-vcenter-41-to%20via%20&#64;rrgirish"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/how-to-migrate-from-vcenter-41-to"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="google-icon" href="https://plus.google.com/share?url=/how-to-migrate-from-vcenter-41-to"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </section>
+        </div>
+        <div class="cf"></div>
+
+            <div class="notepad-author-info">
+                <div class="row">
+                    <section class="notepad-post-author small-12 columns">
+                        
+                            <img src="/images/rrgirish.jpg" class="notepad-post-author-avatar" alt="Girish Rao's photo">
+                        
+                        
+                            <span class="author-label">Author</span>
+                            <h1>Girish Rao</h1>
+                        
+                        
+                            <p><a href="mailto:grao@usc.edu" class="author-website">grao@usc.edu</a></p>
+                        
+                        
+                            <p>vTips for Programmers!</p>
+                        
+                    </section>
+                </div>
+            </div>
+
+        <div class="cf"></div>
+        
+        <div class="cf"></div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Side Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6560934940333129"
+     data-ad-slot="3568443695"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <footer class="notepad-site-footer">
+    <div class="copyright">
+         <section>All content copyright <a href="/about">Girish Rao</a> &copy; 2016 &bull; All rights reserved.</section>
+         <section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+    </div>
+    <div class="social-icons">
+
+        
+        <a href="http://twitter.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        
+        <a href="https://linkedin.com/in/girishramchandrarao">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-linkedin fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <a href="http://github.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-github fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <a href="http://facebook.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+        </a>
+        
+    </div>
+
+    <div class="cf"></div>
+</footer>
+
+</main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="/assets/js/vendor/modernizr.js"></script>
+    <script src="/assets/js/foundation.min.js"></script>
+    
+    <script src="/assets/js/notepad.js"></script>
+    <script src="/assets/js/scripts.min.js"></script>
+    <script src="/assets/js/vendor/nprogress.js"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+    <script type='text/javascript'>console.log("HMFaysal Notepad Theme Version 2.0");</script>
+    <script type='text/javascript'>console.log("https://alum.mit.edu/www/hmfaysal");</script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74122796-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<script>NProgress.start();var interval=setInterval(function(){NProgress.inc()},1000);jQuery(window).load(function(){clearInterval(interval);NProgress.done()});jQuery(window).unload(function(){NProgress.start()});</script>
+
+</body>
+</html>

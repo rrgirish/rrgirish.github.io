@@ -2,32 +2,31 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>FIRST COMMIT &vert; VIRTUALTIPSNTRICKS</title>
-<meta name="description" content="Its ON, baby">
-<meta name="keywords" content="blogging,jekyll">
+<title>ADMINISTRATIVE INTERFACES FOR ESXI &vert; VIRTUALTIPSNTRICKS</title>
+<meta name="description" content="vTips For Programmers">
+<meta name="keywords" content="esxi">
 
 <!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/website-speed.jpg">
-
-<meta name="twitter:title" content="First Commit">
-<meta name="twitter:description" content="Its ON, baby">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="Administrative interfaces for ESXi">
+<meta name="twitter:description" content="vTips For Programmers">
 <meta name="twitter:creator" content="@rrgirish">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First Commit">
-<meta property="og:description" content="Its ON, baby">
-<meta property="og:url" content="/personal/first-commit">
+<meta property="og:title" content="Administrative interfaces for ESXi">
+<meta property="og:description" content="vTips For Programmers">
+<meta property="og:url" content="/administrative-interfaces-for-esxi">
 <meta property="og:site_name" content="VirtualTipsnTricks">
-<meta property="og:image" content="/images/website-speed.jpg">
+<meta property="og:image" content="/images/intro-bg.jpg">
 
 
 
 
 
-<link rel="canonical" href="/personal/first-commit">
+<link rel="canonical" href="/administrative-interfaces-for-esxi">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VirtualTipsnTricks Feed">
 
 
@@ -67,11 +66,9 @@
 </head>
 <body class="post-template" itemscope itemtype="http://schema.org/WebPage">
 
-        <main id="notepad-post-container" class="notepad-post-container intro-effect-sliced" role="main">
-            <header class="notepad-post-header">
-                <div class="bg-img"></div>
-
-                <div class="notepad-post-menu-header">
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
 
                     <a class="notepad-blog-logo" href="">
                         <img src="/images/logo.png" alt="Blog Logo" />
@@ -108,41 +105,32 @@
 </div>
             </div>
 
-            <div class="notepad-post-title bg-check">
-                <h1>First Commit</h1>
-                <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#blogging,jekyll" data-toggle="tooltip" title="Posts tagged with blogging,jekyll" rel="tag">blogging,jekyll</a> <strong><time datetime="2016-02-20T00:00:00+06:00">20 Feb 2016</time></strong></p>
-            </div>
-            <div class="bg-img"></div>
-        </header>
-        <button class="trigger bg-check" data-info="Read more"><span>Trigger</span></button>
-        <img src="/images/website-speed.jpg" alt="cover-image" />
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h1>Administrative interfaces for ESXi</h1>
+                            <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#esxi" data-toggle="tooltip" title="Posts tagged with esxi" rel="tag">esxi</a> <strong><time datetime="2014-10-12T08:51:00+06:00">12 Oct 2014</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        <article class="notepad-post-content post">
-            <div><blockquote>
-  <p>"The beginning is the most important part of the work."
-<small><cite title="Plato">Plato</cite></small></p>
-</blockquote>
-
-<p>I have been away from the blogging scene for quite a while now. Today, it dawned upon me that I need to start writing again. My writing is a little bit rusty now.</p>
-
-<p>The earlier blog was posted on Google Blogger. While it was satisfactory, I wanted more freedom with my themes and customize the pages the way I wanted.</p>
-
-<p>Hence, I built this site using Jekyll, a blog aware static site generator. The blog posts can be easily edited with prose.io. I hope this site will perform as envisioned.</p>
-
+        <article class="notepad-post-content post tag-simple">
+            <div><div dir="ltr" style="text-align: left;" trbidi="on"><br />Apart from the vSphere Client, there are three primary interfaces for administration.<br /><h4>DCUI</h4>DCUI stands for Direct Console User Interface.&nbsp; It refers to the screen that is presented to the user when ESXi is installed for the first time. It is a menu-driven, text-based interface that appears on the physical console of the ESXi server hardware—or via the remote console feature of some hosts; for example, HP Integrity Integrated Lights-Out (iLO) and Dell Remote Assistant Controller (DRAC). Through this interface, an administrator can perform basic tasks such as configuring the management network, resetting the root password, and rebooting the host. Any task that is more sophisticated requires using one of the other interfaces. After the host has been joined to the vCenter Server, the administrator has the option of disabling the DCUI, forcing all host-level management interaction to occur<br />through one of the other interfaces.  <br /><a href="http://lh3.ggpht.com/-VKjgXTtBFiw/VDnskhYbGvI/AAAAAAAACgg/WGreEVtH2Qc/s1600-h/image%25255B3%25255D.png"><img alt="image" border="0" src="http://lh5.ggpht.com/-P5X3gXtjlUA/VDnslpHFVLI/AAAAAAAACgo/aG-jBXko1AY/image_thumb%25255B1%25255D.png?imgmax=800" height="298" style="border-bottom: 0px; border-left: 0px; border-right: 0px; border-top: 0px; display: block; float: none; margin-left: auto; margin-right: auto;" title="image" width="403" /></a> <br />&nbsp; <br /><h4>ESXi Shell</h4>The shell is an interactive CLI that can be used to perform monitoring and diagnostics. The<br />most important element in the vSphere ESXi Shell is called ESXCLI, a command set that provides a full set of monitoring and configuration capabilities for nearly all aspects of ESXi functionality. With ESXCLI, an administrator can perform activities such as listing all network interfaces, performing low-level configuration of an HBA interface, querying kernel parameters, and so on. Of the three interfaces, vSphere ESXi Shell is the most in-depth and complete, so it should be used only for troubleshooting and resolving problems. Unlike a typical Linux shell, vSphere ESXi Shell has a limited set of generic commands, such as for file or process manipulation. Access to vSphere ESXi Shell comes in two forms:<br /><ol><li>Local access is available on the local console of the host, as it is for the DCUI. </li><li>Remote access is available to the host via SSH over the management network.</li></ol>Each of these forms of access can be disabled independently as part of the host’s configuration. For example, the remote (SSH) access can be disabled while still allowing local console access. In all cases, to be granted vSphere ESXi Shell access, an administrator role must be assigned to the user. <br />It is also this feature of ESXi that causes many people to compare it to Linux and claim that is another form of Linux.<br />There are two primary ways in which to define and authenticate users who are able to log in to the shell and the other management interfaces of the host. The first way is to create local user accounts on the ESXi host directly. These users, and their passwords, are not synchronized with any other host, so each account creation must be done independently of one another. The second way is to use a centralized authentication directory, such as Microsoft Active Directory. When an ESXi host is joined to an Active Directory domain, it can check usernames and passwords against this central store without requiring any information to be stored locally.  <br /><strong>vTip: </strong>The <strong>dcui </strong>command can be issued on the shell to display a DCUI emulator. <br /><strong>vTip</strong>: ESXi is NOT Linux.<br /><h4>Host Agent</h4>The host agent, or hostd, is a process running on all ESXi hosts; it provides access to the host that is governed according to the VMware vSphere API model. It plays the role of converting API calls into the corresponding low level actions on the ESXi host. The most popular method of utilizing this API is via CLIs. The two primary CLIs in vSphere are VMware vSphere PowerCLI™, based on Microsoft Windows PowerShell, and the vSphere CLI, a unique set of CLI tools that can be installed on any Linux or Windows system. Any software program that utilizes Web services can also communicate directly with the host agent, enabling more programmatic access. There are several language bindings available for the vSphere Web services API, including Java and .NET. The vSphere Client also uses this agent for managing the ESXi.<br /><br /><strong>vTip: </strong> Putting the management interfaces of ESXi and vCenter on a separate, access-controlled management LAN is recommended. This makes it more secure.<br /><br /><br /><br /><br /><br /></div>
             </div>
         </article>
         <div class="cf"></div>
         <div class="row text-center">
             <section class="notepad-post-share">
-                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;First Commit&quot;%20/personal/first-commit%20via%20&#64;rrgirish"
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;Administrative interfaces for ESXi&quot;%20/administrative-interfaces-for-esxi%20via%20&#64;rrgirish"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/personal/first-commit"
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/administrative-interfaces-for-esxi"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a class="google-icon" href="https://plus.google.com/share?url=/personal/first-commit"
+                <a class="google-icon" href="https://plus.google.com/share?url=/administrative-interfaces-for-esxi"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
                     <i class="fa fa-google-plus"></i>
                 </a>
@@ -235,8 +223,7 @@
     <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="/assets/js/vendor/modernizr.js"></script>
     <script src="/assets/js/foundation.min.js"></script>
-    <script src="/assets/js/vendor/background-check.js"></script>
-    <script src="/assets/js/vendor/post-header-animations.js"></script>
+    
     <script src="/assets/js/notepad.js"></script>
     <script src="/assets/js/scripts.min.js"></script>
     <script src="/assets/js/vendor/nprogress.js"></script>

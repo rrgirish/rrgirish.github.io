@@ -1,6 +1,14 @@
 [
 	
 		{
+		  "title"      : "A simple way to repeat a string in Java",
+		  "category"   : "",
+		  "url"        : "/java/a-simple-way-to-repeat-a-string-in-java",
+		  "date"       : "2016-07-03 00:00:00 +0600",
+		  "shortdate"  : "July 03, 2016"
+		} ,
+	
+		{
 		  "title"      : "Why Jekyll?",
 		  "category"   : "webdevelopment",
 		  "url"        : "/webdevelopment/why-jekyll",
@@ -14,6 +22,230 @@
 		  "url"        : "/personal/first-commit",
 		  "date"       : "2016-02-20 00:00:00 +0600",
 		  "shortdate"  : "February 20, 2016"
+		} ,
+	
+		{
+		  "title"      : "VMware Single Sign-On (SSO) Logs",
+		  "category"   : "",
+		  "url"        : "/vmware-single-sign-on-sso-logs",
+		  "date"       : "2014-11-06 17:25:00 +0600",
+		  "shortdate"  : "November 06, 2014"
+		} ,
+	
+		{
+		  "title"      : "How to Backup and Restore the VMware Directory Services (vmdir) database",
+		  "category"   : "",
+		  "url"        : "/how-to-backup-and-restore-vmware",
+		  "date"       : "2014-11-05 18:08:00 +0600",
+		  "shortdate"  : "November 05, 2014"
+		} ,
+	
+		{
+		  "title"      : "Services in SSO (vSphere 5.5)",
+		  "category"   : "",
+		  "url"        : "/services-in-sso-vsphere-55",
+		  "date"       : "2014-10-23 10:22:00 +0600",
+		  "shortdate"  : "October 23, 2014"
+		} ,
+	
+		{
+		  "title"      : "SSO in Vsphere 5.5",
+		  "category"   : "",
+		  "url"        : "/sso-in-vsphere-55",
+		  "date"       : "2014-10-23 09:56:00 +0600",
+		  "shortdate"  : "October 23, 2014"
+		} ,
+	
+		{
+		  "title"      : "SSO in vSphere 5.1 and its associated problems",
+		  "category"   : "",
+		  "url"        : "/sso-in-vsphere-51-and-its-associated",
+		  "date"       : "2014-10-23 09:18:00 +0600",
+		  "shortdate"  : "October 23, 2014"
+		} ,
+	
+		{
+		  "title"      : "Poodle Vs VMware",
+		  "category"   : "",
+		  "url"        : "/poodle-vs-vmware",
+		  "date"       : "2014-10-16 11:35:00 +0600",
+		  "shortdate"  : "October 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "VMware SSO: An Introduction",
+		  "category"   : "",
+		  "url"        : "/vmware-sso-introduction",
+		  "date"       : "2014-10-15 02:41:00 +0600",
+		  "shortdate"  : "October 15, 2014"
+		} ,
+	
+		{
+		  "title"      : "Acceptance Levels for VIBs",
+		  "category"   : "",
+		  "url"        : "/acceptance-levels-for-vibs",
+		  "date"       : "2014-10-12 13:17:00 +0600",
+		  "shortdate"  : "October 12, 2014"
+		} ,
+	
+		{
+		  "title"      : "Administrative interfaces for ESXi",
+		  "category"   : "",
+		  "url"        : "/administrative-interfaces-for-esxi",
+		  "date"       : "2014-10-12 08:51:00 +0600",
+		  "shortdate"  : "October 12, 2014"
+		} ,
+	
+		{
+		  "title"      : "Joining the vCenter Server Virtual Appliance to AD",
+		  "category"   : "",
+		  "url"        : "/joining-vcenter-server-virtual",
+		  "date"       : "2014-10-09 16:21:00 +0600",
+		  "shortdate"  : "October 09, 2014"
+		} ,
+	
+		{
+		  "title"      : "vSphere Web client vs the Desktop client",
+		  "category"   : "",
+		  "url"        : "/vsphere-web-client-vs-desktop-client",
+		  "date"       : "2014-10-09 10:27:00 +0600",
+		  "shortdate"  : "October 09, 2014"
+		} ,
+	
+		{
+		  "title"      : "PowerCLI from inside the vSphere Web Client",
+		  "category"   : "",
+		  "url"        : "/powercli-from-inside-vsphere-web-client",
+		  "date"       : "2014-10-06 14:29:00 +0600",
+		  "shortdate"  : "October 06, 2014"
+		} ,
+	
+		{
+		  "title"      : "ESXi Log Files",
+		  "category"   : "",
+		  "url"        : "/esxi-log-files",
+		  "date"       : "2014-09-29 17:54:00 +0600",
+		  "shortdate"  : "September 29, 2014"
+		} ,
+	
+		{
+		  "title"      : "PowerCLI script to update all Hosts via VUM",
+		  "category"   : "",
+		  "url"        : "/powercli-script-to-update-all-hosts-via",
+		  "date"       : "2014-09-29 09:50:00 +0600",
+		  "shortdate"  : "September 29, 2014"
+		} ,
+	
+		{
+		  "title"      : "Creating a Database for VCenter in Oracle 12c",
+		  "category"   : "",
+		  "url"        : "/creating-database-for-vcenter-in-oracle",
+		  "date"       : "2014-09-27 11:21:00 +0600",
+		  "shortdate"  : "September 27, 2014"
+		} ,
+	
+		{
+		  "title"      : "VMware VSAN: A Deep Dive",
+		  "category"   : "",
+		  "url"        : "/vmware-vsan-deep-dive",
+		  "date"       : "2014-09-25 14:49:00 +0600",
+		  "shortdate"  : "September 25, 2014"
+		} ,
+	
+		{
+		  "title"      : "VMware VSAN: I/O",
+		  "category"   : "",
+		  "url"        : "/vmware-vsan-introduction-to-vsan",
+		  "date"       : "2014-09-25 14:24:00 +0600",
+		  "shortdate"  : "September 25, 2014"
+		} ,
+	
+		{
+		  "title"      : "VMware Virtual Machine Hardware version 10",
+		  "category"   : "",
+		  "url"        : "/vmware-virtual-machine-hardware-version",
+		  "date"       : "2014-09-16 16:09:00 +0600",
+		  "shortdate"  : "September 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "vCenter 5.5. Client Integration Plug-in doesn’t work in Chrome? Here’s the workaround..",
+		  "category"   : "",
+		  "url"        : "/vcenter-55-client-integration-plug-in",
+		  "date"       : "2014-09-16 14:35:00 +0600",
+		  "shortdate"  : "September 16, 2014"
+		} ,
+	
+		{
+		  "title"      : "My VCAP-DCA 5 Experience with VDCA550 Exam",
+		  "category"   : "",
+		  "url"        : "/my-vcap-dca-5-experience-with-vdca550",
+		  "date"       : "2014-09-08 00:03:00 +0600",
+		  "shortdate"  : "September 08, 2014"
+		} ,
+	
+		{
+		  "title"      : "Six Steps to a Hybrid Cloud",
+		  "category"   : "",
+		  "url"        : "/six-steps-to-hybrid-cloud",
+		  "date"       : "2014-09-02 12:28:00 +0600",
+		  "shortdate"  : "September 02, 2014"
+		} ,
+	
+		{
+		  "title"      : "Hybrid Cloud",
+		  "category"   : "",
+		  "url"        : "/hybrid-cloud",
+		  "date"       : "2014-09-02 12:04:00 +0600",
+		  "shortdate"  : "September 02, 2014"
+		} ,
+	
+		{
+		  "title"      : "Vcloud Director Ipad App doesn&#39;t work!",
+		  "category"   : "",
+		  "url"        : "/vcloud-director-ipad-app-doesnt-work",
+		  "date"       : "2014-08-14 18:16:00 +0600",
+		  "shortdate"  : "August 14, 2014"
+		} ,
+	
+		{
+		  "title"      : "Using PowerCLI to retrieve information on snapshots in your vSphere environment",
+		  "category"   : "",
+		  "url"        : "/using-powercli-to-retrieve-information",
+		  "date"       : "2014-08-13 11:05:00 +0600",
+		  "shortdate"  : "August 13, 2014"
+		} ,
+	
+		{
+		  "title"      : "How to migrate from VCenter 4.1 to VCenter 5.5",
+		  "category"   : "",
+		  "url"        : "/how-to-migrate-from-vcenter-41-to",
+		  "date"       : "2014-08-13 10:55:00 +0600",
+		  "shortdate"  : "August 13, 2014"
+		} ,
+	
+		{
+		  "title"      : "Choosing a password for vSphere SSO",
+		  "category"   : "",
+		  "url"        : "/choosing-password-for-vsphere-sso",
+		  "date"       : "2014-08-12 09:41:00 +0600",
+		  "shortdate"  : "August 12, 2014"
+		} ,
+	
+		{
+		  "title"      : "Comparing memory reclamation techniques in existing hypervisors",
+		  "category"   : "",
+		  "url"        : "/comparing-memory-reclamation-techniques",
+		  "date"       : "2014-07-24 14:37:00 +0600",
+		  "shortdate"  : "July 24, 2014"
+		} ,
+	
+		{
+		  "title"      : "How long does the replication take between SSO sites in a multi-site deployment?",
+		  "category"   : "",
+		  "url"        : "/how-long-does-replication-take-between",
+		  "date"       : "2014-07-24 12:29:00 +0600",
+		  "shortdate"  : "July 24, 2014"
 		} 
 	
 ]

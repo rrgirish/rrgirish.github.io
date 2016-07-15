@@ -1,0 +1,58 @@
+    <!-- Intro Header -->
+    <!--header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">VirtualTipsnTricks.com</h1>
+                        <p class="intro-text">vTips for Programmers!</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div-->
+
+    <header class="notepad-site-head">
+        <div class="notepad-site-head-menu">
+
+          <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+              <div class="container">
+                  <div class="navbar-header">
+                      <a class="navbar-brand page-scroll" href="index.html">
+                          <i class="fa fa-play-circle"></i>  <span class="light">VirtualTipsnTricks</span>
+                      </a>
+                  </div>
+
+
+            <div class="notepad-blog-menu">
+        <div class="notepad-mobile-menu show-for-small">
+            <a href="#"><i class="fa fa-bars"></i></a>
+        </div>
+        <ul class="notepad-menu">
+            <li class="notepad-mobile-close-btn show-for-small text-right">
+                <a href="#"><i class="fa fa-times"></i></a>
+            </li>
+    {% for link in site.links %}
+                <li>{% if link.external %}
+                <a href="{{ link.url }}">{{ link.title }}</a>
+                {% else %}
+                <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+                {% endif %} </li>
+    {% endfor %}
+               <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+        </ul>
+    </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="notepad-site-head-content" >
+            <div class="notepad-site-head-bg"></div>
+            <h1 class="notepad-blog-title">
+                <span class="notepad-site-head-title-bg">
+                    {{ site.title }}
+                </span>
+            </h1>
+            <h2 class="notepad-blog-description">{{ site.description }}</h2>
+        </div>
+    </header>

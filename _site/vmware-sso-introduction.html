@@ -2,32 +2,31 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>FIRST COMMIT &vert; VIRTUALTIPSNTRICKS</title>
-<meta name="description" content="Its ON, baby">
-<meta name="keywords" content="blogging,jekyll">
+<title>VMWARE SSO: AN INTRODUCTION &vert; VIRTUALTIPSNTRICKS</title>
+<meta name="description" content="vTips For Programmers">
+<meta name="keywords" content="vcenter, SSO">
 
 <!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/website-speed.jpg">
-
-<meta name="twitter:title" content="First Commit">
-<meta name="twitter:description" content="Its ON, baby">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="VMware SSO: An Introduction">
+<meta name="twitter:description" content="vTips For Programmers">
 <meta name="twitter:creator" content="@rrgirish">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First Commit">
-<meta property="og:description" content="Its ON, baby">
-<meta property="og:url" content="/personal/first-commit">
+<meta property="og:title" content="VMware SSO: An Introduction">
+<meta property="og:description" content="vTips For Programmers">
+<meta property="og:url" content="/vmware-sso-introduction">
 <meta property="og:site_name" content="VirtualTipsnTricks">
-<meta property="og:image" content="/images/website-speed.jpg">
+<meta property="og:image" content="/images/intro-bg.jpg">
 
 
 
 
 
-<link rel="canonical" href="/personal/first-commit">
+<link rel="canonical" href="/vmware-sso-introduction">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VirtualTipsnTricks Feed">
 
 
@@ -67,11 +66,9 @@
 </head>
 <body class="post-template" itemscope itemtype="http://schema.org/WebPage">
 
-        <main id="notepad-post-container" class="notepad-post-container intro-effect-sliced" role="main">
-            <header class="notepad-post-header">
-                <div class="bg-img"></div>
-
-                <div class="notepad-post-menu-header">
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
 
                     <a class="notepad-blog-logo" href="">
                         <img src="/images/logo.png" alt="Blog Logo" />
@@ -108,41 +105,32 @@
 </div>
             </div>
 
-            <div class="notepad-post-title bg-check">
-                <h1>First Commit</h1>
-                <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#blogging,jekyll" data-toggle="tooltip" title="Posts tagged with blogging,jekyll" rel="tag">blogging,jekyll</a> <strong><time datetime="2016-02-20T00:00:00+06:00">20 Feb 2016</time></strong></p>
-            </div>
-            <div class="bg-img"></div>
-        </header>
-        <button class="trigger bg-check" data-info="Read more"><span>Trigger</span></button>
-        <img src="/images/website-speed.jpg" alt="cover-image" />
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h1>VMware SSO: An Introduction</h1>
+                            <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#vcenter" data-toggle="tooltip" title="Posts tagged with vcenter" rel="tag">vcenter</a>&nbsp;&comma;&nbsp;<a href="/tags/index.html#SSO" data-toggle="tooltip" title="Posts tagged with SSO" rel="tag">SSO</a> <strong><time datetime="2014-10-15T02:41:00+06:00">15 Oct 2014</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        <article class="notepad-post-content post">
-            <div><blockquote>
-  <p>"The beginning is the most important part of the work."
-<small><cite title="Plato">Plato</cite></small></p>
-</blockquote>
-
-<p>I have been away from the blogging scene for quite a while now. Today, it dawned upon me that I need to start writing again. My writing is a little bit rusty now.</p>
-
-<p>The earlier blog was posted on Google Blogger. While it was satisfactory, I wanted more freedom with my themes and customize the pages the way I wanted.</p>
-
-<p>Hence, I built this site using Jekyll, a blog aware static site generator. The blog posts can be easily edited with prose.io. I hope this site will perform as envisioned.</p>
-
+        <article class="notepad-post-content post tag-simple">
+            <div><div dir="ltr" style="text-align: left;" trbidi="on">&nbsp; <br /><h4>What is Single Sign-On?</h4>vCenter Single Sign-On is an authentication broker and security token exchange, and provides a more secure way of accessing your vSphere solutions.<br /> In versions of vSphere 5.0 and earlier, authentication and authorization occurred via the domain connection of the vCenter Server host machine. In this model, all vSphere components which required login needed separate login sessions. This can become quite cumbersome and time consuming when switching between various VMware solutions.<br /> Starting with vSphere 5.1, vCenter Single Sign-On was introduced to act as a federated authentication and authorization source. This allows all VMware software which is programmed to work with SSO to use a single login point to access all solutions.<br /> <h4>History of vCenter Single Sign-On</h4>vCenter Single Sign-On was first introduced with vSphere 5.1 in 2012. SSO in 5.1 was an outsourced software package which was created by an OEM vendor (RSA). This was not very well implemented and VMware recieved a lot of flak from the community and its customers. So, for vSphere 5.5, it was replaced by a much more robust system that was developed in-house at VMware.  <br />&nbsp; <br /><h4>How it works</h4>The vCenter Single Sign-On system runs as a web server application, to which clients can connect over a TCP/IP connection to make authentication and authorization requests. The actual logic is controlled via a series of java applications which are accessed via the front end web server. SSO also maintains a series of “Identity Sources”, which it leverages to manage user requests. An Identity Source represents the physical source of the data of the users and user groups that you manage using SSO. An identity source can be one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. An external directory, such as OpenLDAP, or Microsoft Active Directory<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. The System identity source (vsphere.local database)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. Local Operating System Users (of the machine on which SSO is installed)<br /> Once users have been authenticated, SSO will provide a Token which can be used to login to various vSphere solutions. The configuration for Single Sign-On is maintained in a simple database.<br /> <a href="http://lh6.ggpht.com/--7pTICz0TGg/VD2KUAtEVTI/AAAAAAAACg4/KZgsH4CLNh4/s1600-h/SSO13.jpg"><img alt="SSO-1" border="0" src="http://lh6.ggpht.com/-loJ0VZyBEWQ/VD2KVVXzB-I/AAAAAAAAChA/UyVHMT16qVs/SSO1_thumb1.jpg?imgmax=800" height="292" style="border-bottom-width: 0px; border-left-width: 0px; border-right-width: 0px; border-top-width: 0px; display: block; float: none; margin-left: auto; margin-right: auto;" title="SSO-1" width="454" /></a><br /> <h4>Dependencies and Trusts</h4>Since SSO provides a critical component which is required for all vSphere solutions, almost all of these solutions have their own trust relationship and therefore dependency with SSO. If this trust relationship is broken(via reinstallation, loss of configuration or replacement of SSL certificates, etc.) the solution will almost certainly be rendered inoperable. The below diagram shows the dependencies and trusts that the applications have.<br /> <a href="http://lh3.ggpht.com/-gkAYJMKrfoc/VD2KXKupx-I/AAAAAAAAChI/9ixtQoyUULw/s1600-h/SSO-2%25255B4%25255D.jpg"><img alt="SSO-2" border="0" src="http://lh5.ggpht.com/-Ud1OfahDoV0/VD2KYa4u0tI/AAAAAAAAChQ/487Rya3W_B8/SSO-2_thumb%25255B2%25255D.jpg?imgmax=800" height="223" style="border-bottom: 0px; border-left: 0px; border-right: 0px; border-top: 0px; display: block; float: none; margin-left: auto; margin-right: auto;" title="SSO-2" width="456" /></a><br /><br /><b>vTip: If you need to update the certificates on any of these solutions, make sure the trust is updated as well.&nbsp;</b><br />  <br /><br /></div>
             </div>
         </article>
         <div class="cf"></div>
         <div class="row text-center">
             <section class="notepad-post-share">
-                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;First Commit&quot;%20/personal/first-commit%20via%20&#64;rrgirish"
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;VMware SSO: An Introduction&quot;%20/vmware-sso-introduction%20via%20&#64;rrgirish"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/personal/first-commit"
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/vmware-sso-introduction"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a class="google-icon" href="https://plus.google.com/share?url=/personal/first-commit"
+                <a class="google-icon" href="https://plus.google.com/share?url=/vmware-sso-introduction"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
                     <i class="fa fa-google-plus"></i>
                 </a>
@@ -235,8 +223,7 @@
     <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="/assets/js/vendor/modernizr.js"></script>
     <script src="/assets/js/foundation.min.js"></script>
-    <script src="/assets/js/vendor/background-check.js"></script>
-    <script src="/assets/js/vendor/post-header-animations.js"></script>
+    
     <script src="/assets/js/notepad.js"></script>
     <script src="/assets/js/scripts.min.js"></script>
     <script src="/assets/js/vendor/nprogress.js"></script>

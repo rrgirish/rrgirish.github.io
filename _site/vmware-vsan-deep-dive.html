@@ -2,32 +2,31 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>FIRST COMMIT &vert; VIRTUALTIPSNTRICKS</title>
-<meta name="description" content="Its ON, baby">
-<meta name="keywords" content="blogging,jekyll">
+<title>VMWARE VSAN: A DEEP DIVE &vert; VIRTUALTIPSNTRICKS</title>
+<meta name="description" content="vTips For Programmers">
+<meta name="keywords" content="misc, VSAN">
 
 <!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/website-speed.jpg">
-
-<meta name="twitter:title" content="First Commit">
-<meta name="twitter:description" content="Its ON, baby">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="VMware VSAN: A Deep Dive">
+<meta name="twitter:description" content="vTips For Programmers">
 <meta name="twitter:creator" content="@rrgirish">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First Commit">
-<meta property="og:description" content="Its ON, baby">
-<meta property="og:url" content="/personal/first-commit">
+<meta property="og:title" content="VMware VSAN: A Deep Dive">
+<meta property="og:description" content="vTips For Programmers">
+<meta property="og:url" content="/vmware-vsan-deep-dive">
 <meta property="og:site_name" content="VirtualTipsnTricks">
-<meta property="og:image" content="/images/website-speed.jpg">
+<meta property="og:image" content="/images/intro-bg.jpg">
 
 
 
 
 
-<link rel="canonical" href="/personal/first-commit">
+<link rel="canonical" href="/vmware-vsan-deep-dive">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VirtualTipsnTricks Feed">
 
 
@@ -67,11 +66,9 @@
 </head>
 <body class="post-template" itemscope itemtype="http://schema.org/WebPage">
 
-        <main id="notepad-post-container" class="notepad-post-container intro-effect-sliced" role="main">
-            <header class="notepad-post-header">
-                <div class="bg-img"></div>
-
-                <div class="notepad-post-menu-header">
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
 
                     <a class="notepad-blog-logo" href="">
                         <img src="/images/logo.png" alt="Blog Logo" />
@@ -108,41 +105,32 @@
 </div>
             </div>
 
-            <div class="notepad-post-title bg-check">
-                <h1>First Commit</h1>
-                <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#blogging,jekyll" data-toggle="tooltip" title="Posts tagged with blogging,jekyll" rel="tag">blogging,jekyll</a> <strong><time datetime="2016-02-20T00:00:00+06:00">20 Feb 2016</time></strong></p>
-            </div>
-            <div class="bg-img"></div>
-        </header>
-        <button class="trigger bg-check" data-info="Read more"><span>Trigger</span></button>
-        <img src="/images/website-speed.jpg" alt="cover-image" />
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h1>VMware VSAN: A Deep Dive</h1>
+                            <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#misc" data-toggle="tooltip" title="Posts tagged with misc" rel="tag">misc</a>&nbsp;&comma;&nbsp;<a href="/tags/index.html#VSAN" data-toggle="tooltip" title="Posts tagged with VSAN" rel="tag">VSAN</a> <strong><time datetime="2014-09-25T14:49:00+06:00">25 Sep 2014</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        <article class="notepad-post-content post">
-            <div><blockquote>
-  <p>"The beginning is the most important part of the work."
-<small><cite title="Plato">Plato</cite></small></p>
-</blockquote>
-
-<p>I have been away from the blogging scene for quite a while now. Today, it dawned upon me that I need to start writing again. My writing is a little bit rusty now.</p>
-
-<p>The earlier blog was posted on Google Blogger. While it was satisfactory, I wanted more freedom with my themes and customize the pages the way I wanted.</p>
-
-<p>Hence, I built this site using Jekyll, a blog aware static site generator. The blog posts can be easily edited with prose.io. I hope this site will perform as envisioned.</p>
-
+        <article class="notepad-post-content post tag-simple">
+            <div><div dir="ltr" style="text-align: left;" trbidi="on"><br />With VMware’s vision of having a Software-Defined-Data-Center, the compute, networking and storage resources need to be virtualized and handled in a better way. When talking about Software-Defined Storage, all those heterogeneous storage resources are abstracted into logical pools, consumed and managed via policies set at the datacenter level.<br />Why the focus on storage?<br />Two common concerns that all customers have: storage is costly – in fact based on informal data, storage accounts for 60-70% of the overall infrastructure costs. Part of the reason is the complexity in mapping multiple tiers of applications to only a few tiers of storage. This results in gross over provisioning and under-utilization of storage resources to the applications running on them, which dramatically adds to the cost. In addition storage is complex to manage. While customers can tailor the storage to match the application’s needs, this requires manual management of SLA’s. Compound that with the rapid growth of data and VM’s,it makes data management at scale extremely challenging.  <br />Enter VSAN:  <br /><div align="right"><a href="http://lh4.ggpht.com/-U8LB8XdTlI0/VCPXERO3ceI/AAAAAAAACZs/FtaiurI3i2o/s1600-h/image%25255B4%25255D.png"><img alt="image" border="0" src="http://lh4.ggpht.com/-OlDjnGUWtnw/VCPXF2lVpnI/AAAAAAAACZ0/qV6DWF86tOE/image_thumb%25255B2%25255D.png?imgmax=800" height="308" style="border-bottom: 0px; border-left: 0px; border-right: 0px; border-top: 0px; display: block; float: none; margin-left: auto; margin-right: auto;" title="image" width="309" /></a> </div><div align="left">VSAN is a Software Defined Storage solution fully integrated with VMware vSphere. It is an Object-Based storage system that aggregates local HDDs and SSDs.It has automated policy based storage management for VMs.  </div><h4>&nbsp;</h4><h4>Requirements for VSAN</h4><ol><li>At least 3 x ESXi hosts running version 5.5 update 1 &amp; above</li><li>1 x vCenter server running version 5.5 update 1 &amp; above</li><li>Minimum 6GB of Memory required on each ESXi Host</li><li>1Gb or 10Gb Network on each host </li><li>Vmkernel Virtual Networking Configured on the hosts.</li></ol>Want to know which hardware is supported? Head over to the HCL located at <a href="http://www.vmware.com/resources/compatibility/search.php?deviceCategory=vsan">http://www.vmware.com/resources/compatibility/search.php?deviceCategory=vsan</a><u></u><br /><h4>Disk Groups</h4>Disk groups may be considered as a container in which a relationship between SSDs and magnetic disks are formed. When a virtual machine is created, it is placed on magnetic disks. However its I/O is accelerated through a SSD. The SSD acts as a read cache and write buffer for that VM’s I/O. The SSD. There can be a maximum of 7 Disks per Disk Group. There can be 1 SSD per Disk Disk Group and 5 Disk Groups per ESXi host.  <br />&nbsp; <br /><h4>DEFINING VM REQUIREMENTS</h4>When the Virtual SAN cluster is created, the shared Virtual SAN datastore—which has a set of capabilities that are surfaced up to vCenter is also created. When a vSphere administrator begins to design a virtual machine, that design is influenced by the application it will be hosting. This application might potentially have many sets of requirements, including storage requirements.  <br />The vSphere administrator uses a virtual machine storage policy to specify and contain the application’s storage requirements in the form of storage capabilities that will be attached to the virtual machine hosting the application; the specific storage requirements will be based on capabilities surfaced by the storage system.  <br />In effect, the storage system provides the capabilities, and virtual machines consume them via requirements placed in the virtual machine storage policy. Virtual SAN uses the concept of distributed RAID, by which a vSphere cluster can contend with the failure of a vSphere host, or of a component within a host—for example, magnetic disks, flash-based devices, and network interfaces—and continue to provide complete functionality for all virtual machines. Availability is defined on a per–virtual machine basis through the use of virtual machine storage policies.  <br />vSphere administrators can specify the number of host component failures that a virtual machine can tolerate within the Virtual SAN cluster. If a vSphere administrator sets zero as the number of failures to tolerate in the virtual machine storage policy, one host or disk failure can impact the availability of the virtual machine.  <br />Using virtual machine storage policies along with Virtual SAN distributed RAID architecture, virtual machines and copies of their contents are distributed across multiple vSphere hosts in the cluster. In this case, it is not necessary to migrate data from a failed node to a surviving host in the cluster in the event of a failure.  <br /><h4>&nbsp;</h4><h4>Limits</h4><ul><li>Number of Nodes Supported: 32</li><li>Max Number of Components per Host : 3000</li><li>Max Number of Components per Object : 64</li><li>Max Size of a Single Object : 256GB</li><li>Max number of disks per disk group : 7 MDs and 1 SSD</li><li>Max number of disk groups per host : 5</li><li>Max number of VMs per host : 100</li></ul><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
             </div>
         </article>
         <div class="cf"></div>
         <div class="row text-center">
             <section class="notepad-post-share">
-                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;First Commit&quot;%20/personal/first-commit%20via%20&#64;rrgirish"
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;VMware VSAN: A Deep Dive&quot;%20/vmware-vsan-deep-dive%20via%20&#64;rrgirish"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/personal/first-commit"
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/vmware-vsan-deep-dive"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a class="google-icon" href="https://plus.google.com/share?url=/personal/first-commit"
+                <a class="google-icon" href="https://plus.google.com/share?url=/vmware-vsan-deep-dive"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
                     <i class="fa fa-google-plus"></i>
                 </a>
@@ -235,8 +223,7 @@
     <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="/assets/js/vendor/modernizr.js"></script>
     <script src="/assets/js/foundation.min.js"></script>
-    <script src="/assets/js/vendor/background-check.js"></script>
-    <script src="/assets/js/vendor/post-header-animations.js"></script>
+    
     <script src="/assets/js/notepad.js"></script>
     <script src="/assets/js/scripts.min.js"></script>
     <script src="/assets/js/vendor/nprogress.js"></script>

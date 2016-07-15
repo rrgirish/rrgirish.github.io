@@ -59,6 +59,11 @@ var notepad = (function ($) {
         indexPostAnimate();
         $(window).on('scroll', function() {
             indexPostAnimate();
+            if ($(".notepad-site-head-menu").offset().top > 50) {
+                $(".notepad-site-head-menu").addClass("top-nav-collapse");
+            } else {
+                $(".nnotepad-site-head-menu").removeClass("top-nav-collapse");
+            }
         });
         postHeaderCoverImg();
         mobileMenu();

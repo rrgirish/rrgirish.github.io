@@ -16,11 +16,127 @@
     
     
     <url>
+        <loc>/java/a-simple-way-to-repeat-a-string-in-java</loc>
+    </url>
+    
+    <url>
         <loc>/webdevelopment/why-jekyll</loc>
     </url>
     
     <url>
         <loc>/personal/first-commit</loc>
+    </url>
+    
+    <url>
+        <loc>/vmware-single-sign-on-sso-logs</loc>
+    </url>
+    
+    <url>
+        <loc>/how-to-backup-and-restore-vmware</loc>
+    </url>
+    
+    <url>
+        <loc>/services-in-sso-vsphere-55</loc>
+    </url>
+    
+    <url>
+        <loc>/sso-in-vsphere-55</loc>
+    </url>
+    
+    <url>
+        <loc>/sso-in-vsphere-51-and-its-associated</loc>
+    </url>
+    
+    <url>
+        <loc>/poodle-vs-vmware</loc>
+    </url>
+    
+    <url>
+        <loc>/vmware-sso-introduction</loc>
+    </url>
+    
+    <url>
+        <loc>/acceptance-levels-for-vibs</loc>
+    </url>
+    
+    <url>
+        <loc>/administrative-interfaces-for-esxi</loc>
+    </url>
+    
+    <url>
+        <loc>/joining-vcenter-server-virtual</loc>
+    </url>
+    
+    <url>
+        <loc>/vsphere-web-client-vs-desktop-client</loc>
+    </url>
+    
+    <url>
+        <loc>/powercli-from-inside-vsphere-web-client</loc>
+    </url>
+    
+    <url>
+        <loc>/esxi-log-files</loc>
+    </url>
+    
+    <url>
+        <loc>/powercli-script-to-update-all-hosts-via</loc>
+    </url>
+    
+    <url>
+        <loc>/creating-database-for-vcenter-in-oracle</loc>
+    </url>
+    
+    <url>
+        <loc>/vmware-vsan-deep-dive</loc>
+    </url>
+    
+    <url>
+        <loc>/vmware-vsan-introduction-to-vsan</loc>
+    </url>
+    
+    <url>
+        <loc>/vmware-virtual-machine-hardware-version</loc>
+    </url>
+    
+    <url>
+        <loc>/vcenter-55-client-integration-plug-in</loc>
+    </url>
+    
+    <url>
+        <loc>/my-vcap-dca-5-experience-with-vdca550</loc>
+    </url>
+    
+    <url>
+        <loc>/six-steps-to-hybrid-cloud</loc>
+    </url>
+    
+    <url>
+        <loc>/hybrid-cloud</loc>
+    </url>
+    
+    <url>
+        <loc>/vcloud-director-ipad-app-doesnt-work</loc>
+    </url>
+    
+    <url>
+        <loc>/using-powercli-to-retrieve-information</loc>
+    </url>
+    
+    <url>
+        <loc>/how-to-migrate-from-vcenter-41-to</loc>
+    </url>
+    
+    <url>
+        <loc>/choosing-password-for-vsphere-sso</loc>
+    </url>
+    
+    <url>
+        <loc>/comparing-memory-reclamation-techniques</loc>
+    </url>
+    
+    <url>
+        <loc>/how-long-does-replication-take-between</loc>
     </url>
     
 </urlset>

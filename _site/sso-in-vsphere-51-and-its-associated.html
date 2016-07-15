@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SSO IN VSPHERE 5.1 AND ITS ASSOCIATED PROBLEMS &vert; VIRTUALTIPSNTRICKS</title>
+<meta name="description" content="vTips For Programmers">
+<meta name="keywords" content="vcenter">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="SSO in vSphere 5.1 and its associated problems">
+<meta name="twitter:description" content="vTips For Programmers">
+<meta name="twitter:creator" content="@rrgirish">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSO in vSphere 5.1 and its associated problems">
+<meta property="og:description" content="vTips For Programmers">
+<meta property="og:url" content="/sso-in-vsphere-51-and-its-associated">
+<meta property="og:site_name" content="VirtualTipsnTricks">
+<meta property="og:image" content="/images/intro-bg.jpg">
+
+
+
+
+
+<link rel="canonical" href="/sso-in-vsphere-51-and-its-associated">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VirtualTipsnTricks Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/assets/css/vendor/nprogress.css">
+    <link rel="stylesheet" href="/assets/css/vendor/foundation.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+
+
+
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
+</head>
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">
+
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href="">
+                        <img src="/images/logo.png" alt="Blog Logo" />
+                    </a>
+
+                <div class="notepad-blog-menu">
+    <div class="notepad-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+
+            <li>
+                    <a href="/">Home</a>
+                 </li>
+
+            <li>
+                    <a href="/featured">Featured Posts</a>
+                 </li>
+
+            <li>
+                    <a href="/categories">Categories</a>
+                 </li>
+
+            <li>
+                    <a href="/about">About</a>
+                 </li>
+
+           <li><a href="/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+    </ul>
+
+</div>
+            </div>
+
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h1>SSO in vSphere 5.1 and its associated problems</h1>
+                            <p>by <strong>Girish Rao</strong> &#8212; on <a href="/tags/index.html#vcenter" data-toggle="tooltip" title="Posts tagged with vcenter" rel="tag">vcenter</a> <strong><time datetime="2014-10-23T09:18:00+06:00">23 Oct 2014</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <article class="notepad-post-content post tag-simple">
+            <div><div dir="ltr" style="text-align: left;" trbidi="on"><br />In this post, I will cover a basic overview of the SSO 5.1 architecture.The figure below illustrates the high level architecture of SSO in vSphere 5.1.<br /><a href="http://lh3.ggpht.com/-tc8_EJ6-R6c/VEhzhySDuDI/AAAAAAAAChs/7ZrwkZY-YO8/s1600-h/image%25255B4%25255D.png"><img alt="image" border="0" src="http://lh4.ggpht.com/-ae7fsl7Kobk/VEhzi4RYayI/AAAAAAAACh0/RRV_pXamZj4/image_thumb%25255B2%25255D.png?imgmax=800" height="311" style="border-bottom: 0px; border-left: 0px; border-right: 0px; border-top: 0px; display: block; float: none; margin-left: auto; margin-right: auto;" title="image" width="464" /></a> <br /><h4>Problems with the Services</h4>In vCenter 5.1, the SSO system is comprised of two services:<br /> 1. VMware vCenter Single Sign-On<br /> 2. RSA SSPI<br />The primary Single Sign-On service is basically a Tomcat web server which is used to provide access to a series of web applications. The current status of this service represents only the status of this Tomcat server, and has no bearing on the status of the functionality of the web applications themselves. When this service showed as Running, it would often lead VMware administrators to come to the mistaken conclusion that Single Sign-On was operating correctly. This was not always the case, and often the only way to know if a given application was running was to check the time stamp on the related log files.<br />The RSA SSPI service is used to access the existing Windows login token, for use with the “Windows Session Credentials” login option. Due to the naming convention of this service, many people were not even aware of the existence of this service or its function.<br /><h4>Problems with the Database</h4>Single Sign-On requires a simple database to store configuration files. In SSO 5.1, all supported vCenter database types could be used for the Single Sign-On. This was done for customer convenience, but the allowance for an external database also led users to over emphasize the importance and size of this database. Obviously this database needs to be available for SSO to operate, but the size and number of transactions to this database were both very small.<br />The database also led to the majority of the configuration and installation failures, mostly due to the fact that SSO supported only a “JDBC” style connection to the database, and not the more commonly recognized “Named Pipe” connection style which is created via an ODBC/DSN. Essentially, the database server must be listening on a specified TCIP/IP socket in order for SSO to connect, and this was often not the default configuration for many database servers. Again, a big headache for many customers.<br />In addition, since the existing SSO 5.1 code did not support communication via Integrated Windows Authentication, the database needed to be created properly prior to install. This required the end-user to run a script against his database server to create the database and table spaces. This is an unwieldy procedure which often caused confusion and installation failures. <br />Finally, this model did not support database replication, which was required to configure a proper Multisite environment. This required manual CLI commands for replication and backup, and also caused more confusion during installation and configuration.<br /><h4>Problems with the Deployment Modes</h4><br />The designers of SSO 5.1 tried to provide a series of possible deployment modes which could cover all possible use cases which customers might desire. In the end they settled on four possible deployment modes:<br /> 1. Basic<br /> 2. Primary<br /> 3. Multisite<br /> 4. High Availability (HA)<br /><br />The <strong>Basic</strong> deployment is a single SSO node which can not be linked to another. This mode is automatically used when using the “Simple Install” option in vCenter 5.1. The advantages to this mode are that it is simple conceptually, it supports Local OS Users &amp; Groups as an identity source, and it is easy to install. The disadvantages included an inability to joined a “vCenter Linked Mode” configuration, it had no failover capacity, and since the node could not be converted to a more advanced deployment mode, it often caused management difficulties as the customers environment grew and changed.<br />The Primary deployment represented a parent node which had no specific role, other than the fact that it could have Multisite and HA nodes join it to create the desired type of configuration. Note that this is essentially the only difference between a Primary and a Basic node. In addition, the Primary node lacked the ability to utilize the Local OS Users &amp; Groups directory on the host system.<br />Multisite and HA deployments represented different use cases. Multisite allowed for an SSO 5.1 node in geographically disparate locations, each with its own local configuration and identity sources. High Availability allowed for the SSO 5.1 node to function as a failover system in case of an outage of the Primary Node. Multisite generally worked as described, but unfortunately the High Availability system often presented many challenges due to design limitations.<br />In the end, the number of deployment modes (and in many cases the nomenclature itself) presented an overwhelming number of options. Many customers felt confused by the choices, and often ended up choosing the wrong deployment mode during installation. Since there was no simple method to change deployment modes after install, this resulted in a great deal of wasted time all around.<br /><h4>Problems with Authentication</h4>The primary method of authentication used in SSO 5.1 is to link to Identity Sources using a system known as an LDAP Simple BIND. When an LDAP client connects to the server and an LDAP session is created, Simple BIND sends the users Distinguished Name and Password. The BIND operation establishes the authentication state for a session.<br />SSO 5.1 also supports anonymous BIND (with empty DN and password) which allows the connection to run in an anonymous state. Unfortunately this method caused many issues in multi-forest environments. In many larger environments, this system would fail to get proper group information regarding users, and there were several bugs which interfered with One and Two-way Trusted Domain configurations.<br /><h4>Problems with System Domain Directory</h4>The SSO 5.1 system introduced a Directory which was installed locally and could be used to create users and groups. This was an extremely simple directory structure when compared to things like Active Directory. It was limited to creating users, assigning them to groups, and using vCenter to assign permissions to those principals.<br />For most people who used SSO 5.1, there is only a single user which they would know about: admin@System-Domain. This administrator user was the SSO super user, and could be used to administer and configure SSO via the vSphere Web Client. During upgrades to version 5.5, this would get access to VCenter by default.<br /><h4>Problems with Master Password</h4>Another lesser known element of SSO 5.1 was the concept of a master password. This master password was not associated with any specific user, even in the System-Domain directory. The password was configured during installation to automatically be the same as the password given to the admin@System-Domain user.<br />The distinction was important, because the Master password was not automatically changed when the admin@System-Domain user password was changed. Due to the poor communication regarding this password to the end-users, many administrators would find themselves unable to perform certain administrative tasks against an SSO 5.1 environment because this password had been “lost”. This would result in a full reinstall of Single Sign-On, and subsequent re-registration of other components, which could result in many wasted hours.<br /><strong>vTip: Upgrade to version 5.5 and use the newer SSO and avoid these headaches. :)</strong></div>
+            </div>
+        </article>
+        <div class="cf"></div>
+        <div class="row text-center">
+            <section class="notepad-post-share">
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;SSO in vSphere 5.1 and its associated problems&quot;%20/sso-in-vsphere-51-and-its-associated%20via%20&#64;rrgirish"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/sso-in-vsphere-51-and-its-associated"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="google-icon" href="https://plus.google.com/share?url=/sso-in-vsphere-51-and-its-associated"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </section>
+        </div>
+        <div class="cf"></div>
+
+            <div class="notepad-author-info">
+                <div class="row">
+                    <section class="notepad-post-author small-12 columns">
+                        
+                            <img src="/images/rrgirish.jpg" class="notepad-post-author-avatar" alt="Girish Rao's photo">
+                        
+                        
+                            <span class="author-label">Author</span>
+                            <h1>Girish Rao</h1>
+                        
+                        
+                            <p><a href="mailto:grao@usc.edu" class="author-website">grao@usc.edu</a></p>
+                        
+                        
+                            <p>vTips for Programmers!</p>
+                        
+                    </section>
+                </div>
+            </div>
+
+        <div class="cf"></div>
+        
+        <div class="cf"></div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Side Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6560934940333129"
+     data-ad-slot="3568443695"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <footer class="notepad-site-footer">
+    <div class="copyright">
+         <section>All content copyright <a href="/about">Girish Rao</a> &copy; 2016 &bull; All rights reserved.</section>
+         <section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+    </div>
+    <div class="social-icons">
+
+        
+        <a href="http://twitter.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        
+        <a href="https://linkedin.com/in/girishramchandrarao">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-linkedin fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <a href="http://github.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-github fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <a href="http://facebook.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+        </a>
+        
+    </div>
+
+    <div class="cf"></div>
+</footer>
+
+</main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="/assets/js/vendor/modernizr.js"></script>
+    <script src="/assets/js/foundation.min.js"></script>
+    
+    <script src="/assets/js/notepad.js"></script>
+    <script src="/assets/js/scripts.min.js"></script>
+    <script src="/assets/js/vendor/nprogress.js"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+    <script type='text/javascript'>console.log("HMFaysal Notepad Theme Version 2.0");</script>
+    <script type='text/javascript'>console.log("https://alum.mit.edu/www/hmfaysal");</script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74122796-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<script>NProgress.start();var interval=setInterval(function(){NProgress.inc()},1000);jQuery(window).load(function(){clearInterval(interval);NProgress.done()});jQuery(window).unload(function(){NProgress.start()});</script>
+
+</body>
+</html>

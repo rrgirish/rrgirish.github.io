@@ -8,7 +8,8 @@ title: A simple way to repeat a string in Java
 description: ''
 headline: ''
 modified: ''
-categories: ''
+categories:
+  - java
 tags: ''
 imagefeature: ''
 ---

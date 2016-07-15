@@ -1,6 +1,146 @@
 callback([
 
   {
+    "text": "How long does the replication take between SSO sites in a multi-site deployment?",
+    "href": "/how-long-does-replication-take-between"
+  } ,
+
+  {
+    "text": "Comparing memory reclamation techniques in existing hypervisors",
+    "href": "/comparing-memory-reclamation-techniques"
+  } ,
+
+  {
+    "text": "Choosing a password for vSphere SSO",
+    "href": "/choosing-password-for-vsphere-sso"
+  } ,
+
+  {
+    "text": "How to migrate from VCenter 4.1 to VCenter 5.5",
+    "href": "/how-to-migrate-from-vcenter-41-to"
+  } ,
+
+  {
+    "text": "Using PowerCLI to retrieve information on snapshots in your vSphere environment",
+    "href": "/using-powercli-to-retrieve-information"
+  } ,
+
+  {
+    "text": "Vcloud Director Ipad App doesn't work!",
+    "href": "/vcloud-director-ipad-app-doesnt-work"
+  } ,
+
+  {
+    "text": "Hybrid Cloud",
+    "href": "/hybrid-cloud"
+  } ,
+
+  {
+    "text": "Six Steps to a Hybrid Cloud",
+    "href": "/six-steps-to-hybrid-cloud"
+  } ,
+
+  {
+    "text": "My VCAP-DCA 5 Experience with VDCA550 Exam",
+    "href": "/my-vcap-dca-5-experience-with-vdca550"
+  } ,
+
+  {
+    "text": "vCenter 5.5. Client Integration Plug-in doesn’t work in Chrome? Here’s the workaround..",
+    "href": "/vcenter-55-client-integration-plug-in"
+  } ,
+
+  {
+    "text": "VMware Virtual Machine Hardware version 10",
+    "href": "/vmware-virtual-machine-hardware-version"
+  } ,
+
+  {
+    "text": "VMware VSAN: I/O",
+    "href": "/vmware-vsan-introduction-to-vsan"
+  } ,
+
+  {
+    "text": "VMware VSAN: A Deep Dive",
+    "href": "/vmware-vsan-deep-dive"
+  } ,
+
+  {
+    "text": "Creating a Database for VCenter in Oracle 12c",
+    "href": "/creating-database-for-vcenter-in-oracle"
+  } ,
+
+  {
+    "text": "PowerCLI script to update all Hosts via VUM",
+    "href": "/powercli-script-to-update-all-hosts-via"
+  } ,
+
+  {
+    "text": "ESXi Log Files",
+    "href": "/esxi-log-files"
+  } ,
+
+  {
+    "text": "PowerCLI from inside the vSphere Web Client",
+    "href": "/powercli-from-inside-vsphere-web-client"
+  } ,
+
+  {
+    "text": "vSphere Web client vs the Desktop client",
+    "href": "/vsphere-web-client-vs-desktop-client"
+  } ,
+
+  {
+    "text": "Joining the vCenter Server Virtual Appliance to AD",
+    "href": "/joining-vcenter-server-virtual"
+  } ,
+
+  {
+    "text": "Administrative interfaces for ESXi",
+    "href": "/administrative-interfaces-for-esxi"
+  } ,
+
+  {
+    "text": "Acceptance Levels for VIBs",
+    "href": "/acceptance-levels-for-vibs"
+  } ,
+
+  {
+    "text": "VMware SSO: An Introduction",
+    "href": "/vmware-sso-introduction"
+  } ,
+
+  {
+    "text": "Poodle Vs VMware",
+    "href": "/poodle-vs-vmware"
+  } ,
+
+  {
+    "text": "SSO in vSphere 5.1 and its associated problems",
+    "href": "/sso-in-vsphere-51-and-its-associated"
+  } ,
+
+  {
+    "text": "SSO in Vsphere 5.5",
+    "href": "/sso-in-vsphere-55"
+  } ,
+
+  {
+    "text": "Services in SSO (vSphere 5.5)",
+    "href": "/services-in-sso-vsphere-55"
+  } ,
+
+  {
+    "text": "How to Backup and Restore the VMware Directory Services (vmdir) database",
+    "href": "/how-to-backup-and-restore-vmware"
+  } ,
+
+  {
+    "text": "VMware Single Sign-On (SSO) Logs",
+    "href": "/vmware-single-sign-on-sso-logs"
+  } ,
+
+  {
     "text": "First Commit",
     "href": "/personal/first-commit"
   } ,
@@ -8,6 +148,11 @@ callback([
   {
     "text": "Why Jekyll?",
     "href": "/webdevelopment/why-jekyll"
+  } ,
+
+  {
+    "text": "A simple way to repeat a string in Java",
+    "href": "/java/a-simple-way-to-repeat-a-string-in-java"
   } 
 
 ])

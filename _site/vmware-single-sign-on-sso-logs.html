@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>VMWARE SINGLE SIGN-ON (SSO) LOGS &vert; VIRTUALTIPSNTRICKS</title>
+<meta name="description" content="vTips For Programmers">
+<meta name="keywords" content="">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:title" content="VMware Single Sign-On (SSO) Logs">
+<meta name="twitter:description" content="vTips For Programmers">
+<meta name="twitter:creator" content="@rrgirish">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VMware Single Sign-On (SSO) Logs">
+<meta property="og:description" content="vTips For Programmers">
+<meta property="og:url" content="/vmware-single-sign-on-sso-logs">
+<meta property="og:site_name" content="VirtualTipsnTricks">
+<meta property="og:image" content="/images/intro-bg.jpg">
+
+
+
+
+
+<link rel="canonical" href="/vmware-single-sign-on-sso-logs">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="VirtualTipsnTricks Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/assets/css/vendor/nprogress.css">
+    <link rel="stylesheet" href="/assets/css/vendor/foundation.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+
+
+
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>
+</head>
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">
+
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href="">
+                        <img src="/images/logo.png" alt="Blog Logo" />
+                    </a>
+
+                <div class="notepad-blog-menu">
+    <div class="notepad-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+
+            <li>
+                    <a href="/">Home</a>
+                 </li>
+
+            <li>
+                    <a href="/featured">Featured Posts</a>
+                 </li>
+
+            <li>
+                    <a href="/categories">Categories</a>
+                 </li>
+
+            <li>
+                    <a href="/about">About</a>
+                 </li>
+
+           <li><a href="/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+    </ul>
+
+</div>
+            </div>
+
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                            <h1>VMware Single Sign-On (SSO) Logs</h1>
+                            <p>by <strong>Girish Rao</strong> &#8212;  <strong><time datetime="2014-11-06T17:25:00+06:00">06 Nov 2014</time></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <article class="notepad-post-content post tag-simple">
+            <div><p>&nbsp;</p> <p>Ever wondered what kind of logs are generated by SSO? Turns out there are a ton of them! Read on to find out what gets logged where. Of course, VMware has made it easy for us to collect all the logs together by simply running the support bundle utility. However, this information is good to know to do the first level of troubleshooting. Let's start with the installer logs</p> <table cellspacing="0" cellpadding="2" width="515" border="1"> <tbody> <tr> <td valign="top" width="98"> <p align="left"><strong>Log File Name</strong></p></td> <td valign="top" width="249"> <blockquote style="margin-right: 0px" dir="ltr"> <p align="left"><strong>Location</strong></p></blockquote></td> <td valign="top" width="166"> <p align="left"><strong>Purpose</strong></p></td></tr> <tr> <td valign="top" width="98"> <p align="left">vminst.log</p></td> <td valign="top" width="249"> <p align="left">%TEMP%</p></td> <td valign="top" width="166"> <p align="left">Single Sign-On installer log</p></td></tr> <tr> <td valign="top" width="98"> <p align="left">vim-sso-msi.log</p></td> <td valign="top" width="249"> <p align="left">%TEMP%</p></td> <td valign="top" width="166"> <p align="left">MSI installer verbose logs </p></td></tr> <tr> <td valign="top" width="98"> <p align="left">vim_ssoreg.log</p></td> <td valign="top" width="249"> <p align="left">%TEMP%</p></td> <td valign="top" width="166"> <p align="left">Single Sign-On Lookup Service log.</p></td></tr> <tr> <td valign="top" width="98"> <p align="left">exported_sso.properties</p></td> <td valign="top" width="249"> <p align="left">%TEMP%</p></td> <td valign="top" width="166"> <p align="left">Endpoint information about each of the Single Sign-On Solution Users and identity sources extracted from previous vCenter Single Sign-On 5.1.0 instance.</p></td></tr> <tr> <td valign="top" width="98"> <p align="left">vim-openssl-msi.log</p></td> <td valign="top" width="249"> <p align="left">%TEMP%</p></td> <td valign="top" width="166"> <p align="left">MSI installer verbose log for OpenSSL installation</p></td></tr> <tr> <td valign="top" width="98"> <p align="left">vim-python-msi.log</p></td> <td valign="top" width="249"> <p align="left">%TEMP%</p></td> <td valign="top" width="166"> <p align="left">MSI installer verbose log for Python installation</p></td></tr> <tr> <td valign="top" width="98"> <p align="left">vim-kfw-msi.log<br></p></td> <td valign="top" width="249"> <p align="left">%TEMP%</p></td> <td valign="top" width="166"> <p align="left">MSI installer verbose log for MIT Kerberos installation</p></td></tr></tbody></table> <p>Now let’s take a look at the logs for each component in SSO. In my previous posts I have gone into some level of detail about the components in SSO.</p> <p>&nbsp;</p> <h4>VMware Directory Services (vmdir) logs</h4> <table cellspacing="0" cellpadding="2" width="514" border="1"> <tbody> <tr> <td valign="top" width="104"> <p align="left"><strong>Log File Name</strong></p></td> <td valign="top" width="198"> <blockquote style="margin-right: 0px" dir="ltr"> <p align="left"><strong>Location</strong></p></blockquote></td> <td valign="top" width="210"> <p align="left"><strong>Purpose</strong></p></td></tr> <tr> <td valign="top" width="108"> <p>vdcpromo.log<br><br></p></td> <td valign="top" width="203"> <p align="left">C:\ProgramData\Vmware\CIS\logs\vmdird\</p> <p align="left">VCVA: /var/log/vmware/vmdir</p></td> <td valign="top" width="195"> <p>Promotion and demotion operation information for the Single Sign-On instance when joined or removed from a linked configurations</p></td></tr> <tr> <td valign="top" width="109"> <p>vdcsetupIdu.log</p></td> <td valign="top" width="216"> <p align="left">C:\ProgramData\Vmware\CIS\logs\vmdird\</p> <p align="left">VCVA: /var/log/vmware/vmdir</p></td> <td valign="top" width="184"> <p>VMware Directory Service setup post-installation log containing information about the localhost name.</p></td></tr> <tr> <td valign="top" width="109"> <p>vmdir.log</p></td> <td valign="top" width="227"> <p align="left">C:\ProgramData\Vmware\CIS\logs\vmdird\</p> <p align="left">VCVA: /var/log/vmware/vmdir</p></td> <td valign="top" width="174"> <p>Health reports for the VMware Directory Service (VMDir) service and the VMDir database.</p></td></tr></tbody></table> <p>&nbsp;</p> <h4>VMware Identity Management Service (idm) logs</h4> <table cellspacing="0" cellpadding="2" width="513" border="1"> <tbody> <tr> <td valign="top" width="94"> <p align="left"><strong>Log File Name</strong></p></td> <td valign="top" width="231"> <blockquote style="margin-right: 0px" dir="ltr"> <p align="left"><strong>Location</strong></p></blockquote></td> <td valign="top" width="186"> <p align="left"><strong>Purpose</strong></p></td></tr> <tr> <td valign="top" width="94"> <p>vmware-sts-idmd.log<br> <p><br><br><br></p></td> <td valign="top" width="231"> <p align="left">C:\ProgramData\Vmware\CIS\logs\vmware-sso\</p> <p align="left">VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="186"> <p>VMware Identity Management service run-time logs, time-stamped records of user attempts when accessing Single Sign-On for administrative purposes.</p></td></tr> <tr> <td valign="top" width="94"> <p>vmware-sts.ldmd-perf.log</p></td> <td valign="top" width="231"> <p align="left">C:\ProgramData\Vmware\CIS\logs\vmware-sso\</p> <p align="left">VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="186"> <p>VMware Identity Management service performance counter logs.</p></td></tr> <tr> <td valign="top" width="94"> <p>VMwareIdentityMgmtService.&lt;date&gt;.log<br></p></td> <td valign="top" width="231"> <p align="left">C:\ProgramData\Vmware\CIS\logs\vmware-sso\</p> <p align="left">VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="186"> <p>Daemon log once the Identity Management Service has started.</p></td></tr></tbody></table> <p>&nbsp;</p> <h4>VMware Secure Token Service (sts) logs</h4> <table cellspacing="0" cellpadding="2" width="513" border="1"> <tbody> <tr> <td valign="top" width="98"> <p align="left"><strong>Log File Name</strong></p></td> <td valign="top" width="224"> <blockquote style="margin-right: 0px" dir="ltr"> <p align="left"><strong>Location</strong></p></blockquote></td> <td valign="top" width="189"> <p align="left"><strong>Purpose</strong></p></td></tr> <tr> <td valign="top" width="98"> <p>wrapper.log<br><br></p></td> <td valign="top" width="224"> <p>C:\ProgramData\VMware\CIS\runtime\VMwareSTS\logs<br>VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="189"> <p>Java service wrapper log.<br></p></td></tr> <tr> <td valign="top" width="98"> <p>ssoAdminServer.log</p></td> <td valign="top" width="224"> <p>C:\ProgramData\VMware\CIS\runtime\VMwareSTS\logs<br>VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="189"> <p>SSO Admin Server log.</p></td></tr> <tr> <td valign="top" width="98"> <p>lookupServer.log<br></p> <p><br></p></td> <td valign="top" width="224"> <p>C:\ProgramData\VMware\CIS\runtime\VMwareSTS\logs<br>VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="189"> <p>SSO Lookup Server log.</p></td></tr> <tr> <td valign="top" width="98"> <p>catalina.&lt;date&gt;.log</p></td> <td valign="top" width="224"> <p>C:\ProgramData\VMware\CIS\runtime\VMwareSTS\logs<br>VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="189"> <p>Web Server log.<br></p></td></tr> <tr> <td valign="top" width="98"> <p>vmware-identity-sts.log<br></p></td> <td valign="top" width="224"> <p>C:\ProgramData\VMware\CIS\runtime\VMwareSTS\logs<br>VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="189"> <p>Interactions between STS and IDM.<br></p></td></tr> <tr> <td valign="top" width="98"> <p>vmware-identity-sts-perf.log</p></td> <td valign="top" width="224"> <p>C:\ProgramData\VMware\CIS\runtime\VMwareSTS\logs<br>VCVA: /var/log/vmware/sso</p></td> <td valign="top" width="189"> <p>Performance results of interactions between STS and IDM.</p></td></tr></tbody></table> <h4>&nbsp;</h4> <h4>&nbsp;</h4> <h4>VMware Kdc Service (vmkdc) logs</h4> <table cellspacing="0" cellpadding="2" width="516" border="1"> <tbody> <tr> <td valign="top" width="110"> <p align="left"><strong>Log File Name</strong></p></td> <td valign="top" width="220"> <blockquote style="margin-right: 0px" dir="ltr"> <p align="left"><strong>Location</strong></p></blockquote></td> <td valign="top" width="184"> <p align="left"><strong>Purpose</strong></p></td></tr> <tr> <td valign="top" width="110"> <p>vmkdcd.log</p></td> <td valign="top" width="220"> <p>C:\ProgramData\VMware\CIS\logs\vmkdcd\<br>VCVA: /var/log/vmware/vmkdc<br></p></td> <td valign="top" width="184"> <p>Key Distribution Center (kdc) run-time log, reports ports conflicts preventing the service from starting etc.</p></td></tr></tbody></table><br> <p><strong>vTip: If you recall there is one more service: the vmca service. This service doesn’t generate any logs *yet*. </strong></p>  
+            </div>
+        </article>
+        <div class="cf"></div>
+        <div class="row text-center">
+            <section class="notepad-post-share">
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;VMware Single Sign-On (SSO) Logs&quot;%20/vmware-single-sign-on-sso-logs%20via%20&#64;rrgirish"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=/vmware-single-sign-on-sso-logs"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="google-icon" href="https://plus.google.com/share?url=/vmware-single-sign-on-sso-logs"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </section>
+        </div>
+        <div class="cf"></div>
+
+            <div class="notepad-author-info">
+                <div class="row">
+                    <section class="notepad-post-author small-12 columns">
+                        
+                            <img src="/images/rrgirish.jpg" class="notepad-post-author-avatar" alt="Girish Rao's photo">
+                        
+                        
+                            <span class="author-label">Author</span>
+                            <h1>Girish Rao</h1>
+                        
+                        
+                            <p><a href="mailto:grao@usc.edu" class="author-website">grao@usc.edu</a></p>
+                        
+                        
+                            <p>vTips for Programmers!</p>
+                        
+                    </section>
+                </div>
+            </div>
+
+        <div class="cf"></div>
+        
+        <div class="cf"></div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Side Ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6560934940333129"
+     data-ad-slot="3568443695"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <footer class="notepad-site-footer">
+    <div class="copyright">
+         <section>All content copyright <a href="/about">Girish Rao</a> &copy; 2016 &bull; All rights reserved.</section>
+         <section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+    </div>
+    <div class="social-icons">
+
+        
+        <a href="http://twitter.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        
+        <a href="https://linkedin.com/in/girishramchandrarao">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-linkedin fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <a href="http://github.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-github fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+        <a href="http://facebook.com/rrgirish">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+        </a>
+        
+    </div>
+
+    <div class="cf"></div>
+</footer>
+
+</main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="/assets/js/vendor/modernizr.js"></script>
+    <script src="/assets/js/foundation.min.js"></script>
+    
+    <script src="/assets/js/notepad.js"></script>
+    <script src="/assets/js/scripts.min.js"></script>
+    <script src="/assets/js/vendor/nprogress.js"></script>
+
+    <script>
+      $(document).foundation();
+    </script>
+    <script type='text/javascript'>console.log("HMFaysal Notepad Theme Version 2.0");</script>
+    <script type='text/javascript'>console.log("https://alum.mit.edu/www/hmfaysal");</script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74122796-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<script>NProgress.start();var interval=setInterval(function(){NProgress.inc()},1000);jQuery(window).load(function(){clearInterval(interval);NProgress.done()});jQuery(window).unload(function(){NProgress.start()});</script>
+
+</body>
+</html>

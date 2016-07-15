@@ -119,14 +119,14 @@ prose:
           options:
             - name: "Personal"
               value: personal
-            - name: "Engineering"
-              value: engineering
-            - name: "Physics"
-              value: physics
-            - name: "Psychology"
-              value: psychology
-            - name: "Interesting"
-              value: interesting
+            - name: "Vmware"
+              value: vmware
+            - name: "Java"
+              value: java
+            - name: "Interviews"
+              value: interviews
+            - name: "misc"
+              value: misc
             - name: "Web-Development"
               value: webdevelopment
           alterable: true
