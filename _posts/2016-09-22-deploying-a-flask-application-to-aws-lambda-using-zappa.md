@@ -4,7 +4,7 @@ published: true
 mathjax: false
 featured: false
 comments: false
-title: An Awesome Headline!
+title: Deploying a flask app to AWS Lambda using Zappa
 ---
 AWS Lambda lets you run code without provisioning or managing servers. The advantage of using Lamdba is: **zero administration**. Just upload your code and Lambda takes care of everything required to run and scale your code with high availability. So how does one deploy a flask application to AWS Lamdba.
 
