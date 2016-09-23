@@ -35,12 +35,14 @@ This will create a zappa_setting.json file which should look something like the 
 ```
 
 3) Install AWS CLI and enter your access key and secret access key. These can be obtained via the AWS console. Create one if you dont have one already.
+
 ```
 $ pip install awscli
 $ aws configure
 ```
 
 4) Run
+
 ```
 $ zappa deploy dev
 That's it. Your app should be running on AWS Lambda!
