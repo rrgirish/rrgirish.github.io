@@ -24,12 +24,14 @@ So let's get started:
 1) Go to the directory containing the flask code.
 
 2) Setup your virtual env
+
 ```
 $ pip install virtualenv                     ###only if you dont have virtualenv already installed
 $ virtualenv env
 $ source env/bin/activate
 $ pip install flask zappa
 ```
+
 This will create a zappa_setting.json file which should look something like the one below. Make sure the s3_bucket matches the one you have access to. Dev stands for your dev environment, you can have as many configurations as you like.
 
 ```
