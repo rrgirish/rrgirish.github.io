@@ -8,7 +8,9 @@ title: Deploying a Flask application to AWS Lambda using Zappa
 description: ''
 headline: ''
 modified: ''
-categories: ''
+categories: 
+	-AWS
+	-python
 tags: ''
 imagefeature: ''
 ---
