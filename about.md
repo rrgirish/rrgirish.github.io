@@ -18,7 +18,7 @@ imagefeature: cover9.jpg
 
 My name is **Girish Rao**, and this is my personal blog.  
 
-I am an Engineering Manager at Oracle and I have 11 years of experience in Software Development and Automation. I also have a Masters degree in Computer Science from USC (Trojans FTW!). I am passionate about solving complex engineering problems by utilizing my analytical and algorithm design skills. I am broadly interested in cloud computing, machine learning, algorithms, security and web development and automation.
+I am an Engineering Manager at Oracle and I have 12 years of experience in Software Development and Automation. I also have a Masters degree in Computer Science from USC (Trojans FTW!). I am passionate about solving complex engineering problems by utilizing my analytical and algorithm design skills. I am broadly interested in cloud computing, machine learning, algorithms, security and web development and automation.
 
 I am very comfortable in Java, Javascript and Python. I loved using swift, C, C++ for some of my academic projects.
 
